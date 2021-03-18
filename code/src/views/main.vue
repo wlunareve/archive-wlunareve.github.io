@@ -1,19 +1,18 @@
 <template>
   <div class="outer-wrapper">
     <div class="wrapper"> 
+      <sun />
       <div class="slide spring">
-        <Sun />
-        <div v-for="(item, index) in hills" :key="index" class="hill hill--spring" />
-        <!-- <div class="mountain" /> -->
+        <hill v-for="(item, index) in hills" :key="index" weather="spring" />
       </div>
       <div class="slide summer">
-        <div v-for="(item, index) in hills" :key="index" class="hill hill--summer" />
+        <hill v-for="(item, index) in hills" :key="index" weather="summer" />
       </div>
       <div class="slide fall">
-        <div v-for="(item, index) in hills" :key="index" class="hill hill--fall" />
+        <hill v-for="(item, index) in hills" :key="index" weather="fall" />
       </div>
       <div class="slide winter">
-        <div v-for="(item, index) in hills" :key="index" class="hill hill--winter" />
+        <hill v-for="(item, index) in hills" :key="index" weather="winter" />
       </div>
     </div>
   </div>
@@ -21,12 +20,14 @@
 
 <script>
 import Sun from "@/components/weather/sun.vue";
+import Hill from '@/components/ground/hill.vue';
 
 export default {
   name: "main",
 
   components: {
-    Sun,
+    Sun, 
+    Hill
   },
 
   data() {
@@ -71,33 +72,5 @@ export default {
     font-size: xx-large;
   }
 
-  .spring {
-    // background: linear-gradient(0deg, #A4CF66, #00B9F2)
-  }
-
-  .hill {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 10vw;
-    height: 10vh;
-    border-radius: 100% 100% 0 0;
-
-    &--spring {
-      background: #779E36;
-    }
-
-    &--summer {
-      background: green;
-    }
-
-    &--fall {
-      background: #B56228;
-    }
-
-    &--winter {
-      background: #634329;
-    }
-  }
 </style>
 
