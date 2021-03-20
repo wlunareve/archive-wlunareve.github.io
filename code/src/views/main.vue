@@ -2,6 +2,7 @@
   <div class="outer-wrapper">
     <div class="wrapper"> 
       <sun />
+      <cloud />
       <div class="slide spring">
         <hill v-for="(item, index) in hills" :key="index" weather="spring" />
       </div>
@@ -20,6 +21,7 @@
 
 <script>
 import Sun from "@/components/weather/sun.vue";
+import Cloud from "@/components/weather/cloud.vue";
 import Hill from '@/components/ground/hill.vue';
 
 export default {
@@ -27,6 +29,7 @@ export default {
 
   components: {
     Sun, 
+    Cloud,
     Hill
   },
 
