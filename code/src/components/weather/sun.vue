@@ -38,6 +38,8 @@ import { defineProps, ref, computed, reactive } from "vue";
     left: 50vw;
     bottom: 0;
     transform: translate(-50%, 0) rotate(var(--sunDeg));
+    pointer-events: none;
+    z-index: 1;
   }
 
 

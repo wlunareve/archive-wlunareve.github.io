@@ -22,7 +22,7 @@ export default {
 
   data() {
     return {
-      cloud_count: [...Array(40)].map(() => {
+      cloud_count: [...Array(10)].map(() => {
         return {
           top: Math.random(),
           left: Math.random(),
@@ -39,7 +39,7 @@ export default {
 .clouds {
   position: absolute;
   height: 100vh;
-  width: 400vw;
+  width: 100vw;
 }
 
 .cloud__wrapper {
