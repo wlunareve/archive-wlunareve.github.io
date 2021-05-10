@@ -4,7 +4,8 @@
 
 <style>
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-family: Georgia;
+    /* font-family: futura-pt,"system-ui",Helvetica Neue,sans-serif;; */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
