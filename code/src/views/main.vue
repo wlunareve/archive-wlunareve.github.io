@@ -1,77 +1,48 @@
 <template>
-  <div class="outer-wrapper">
-    <div class="wrapper">
-      <sun />
-      <!-- <cloud /> -->
-      <spring class="slide" />
-      <div class="slide summer">
-        <hill v-for="(item, index) in hills" :key="index" weather="summer" />
-      </div>
-      <div class="slide fall">
-        <hill v-for="(item, index) in hills" :key="index" weather="fall" />
-      </div>
-      <div class="slide winter">
-        <hill v-for="(item, index) in hills" :key="index" weather="winter" />
-      </div>
-    </div>
-  </div>
+  <main class="outer-wrapper">
+    <Navbar/>
+    <section class="spring"></section>
+    <section class="summer"></section>
+    <section class="fall"></section>
+    <section class="winter"></section>
+  </main>
 </template>
 
 <script>
-import Sun from "@/components/weather/sun.vue";
-import Cloud from "@/components/weather/cloud.vue";
-import Hill from "@/components/ground/hill.vue";
-import Spring from '@/views/season/spring.vue';
-
+import Navbar from "@/components/basic/navbar.vue"
 export default {
   name: "main",
 
   components: {
-    Sun,
-    Cloud,
-    Hill,
-    Spring,
-  },
-
-  data() {
-    return {
-      hills: [...Array(10)],
-    };
+    Navbar
   },
 };
 </script>
 
 <style lang="scss" scoped>
 .outer-wrapper {
-  width: 100vh;
-  height: 100vw;
-  transform: rotate(-90deg) translateX(-100vh);
-  transform-origin: top left;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  position: absolute;
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  width: 400vw;
-  transform: rotate(90deg) translateY(-100vh);
-  transform-origin: top left;
-}
-
-.slide {
   width: 100vw;
-  height: 100vh;
-  background: beige;
-  display: flex;
-  align-items: flex-end;
-  font-size: xx-large;
+  height: 400vh;
 }
+
+// .spring {
+//   height: 135vh;
+//   background: linear-gradient(180deg, #94D39E, #ebf8e1, #EA8C6A);
+// }
+
+// .summer {
+//   height: 135vh;
+//   background: linear-gradient(180deg, #EA8C6A, #ebf8e1, #DF9A23);
+// }
+
+// .fall {
+//   height: 135vh;
+//   background: linear-gradient(180deg, #DF9A23, #ebf8e1, #7DC4C6);
+// }
+
+// .winter {
+//   height: 100vh;
+//   background: linear-gradient(180deg, #7DC4C6, #ebf8e1);
+// }
 </style>
 
