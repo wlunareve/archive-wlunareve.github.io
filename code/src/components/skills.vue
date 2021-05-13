@@ -17,8 +17,10 @@ export default {
       'Javascript',
       'CSS/SCSS',
       'Vue',
+      'Funtional Programming',
       'Babel',
       'Webpack',
+      'Svelte',
       'Jest',
       'NightWatch',
       'Docker',
@@ -59,18 +61,46 @@ function add_scroll_position_event (center_rgb, selector) {
 
   .skills {
     width: 1280px;
-    height: 500vh;
+    height: 120vh;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    // background: rgba(248,211,216,.75);
 
     &__title {
+      position: sticky;
+      top: 30rem;
       color: #e77d5d;  
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 60vw;
+        height: 5rem;
+        top: -3rem;
+        background: rgba(248,211,216,.75);;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 60vw;
+        height: 300vh;
+        top: 15rem;
+        // left: 40rem;
+        background: rgba(248,211,216,.75);;
+      }
     }
 
     &__content {
-      font-size: 3rem;
+      font-size: 4rem;
+      line-height: 8rem;
       margin-top: 5rem;
+      text-align: right;
+      color: #e77d5d;  
+      
     }
   }
 
