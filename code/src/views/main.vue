@@ -2,30 +2,35 @@
   <main class="wrapper">
     <div class="content">
       <Navbar/>
-      <section class="section spring"></section>
+      <Gate class="section"></Gate>
       <Skills></Skills>
-      <section class="section fall"></section>
-      <section class="section winter"></section>
+      <Personal class="section"></Personal>
+      <Portfolio class="section"></Portfolio>
     </div>
   </main>
 </template>
 
 <script>
-import Navbar from "@/components/basic/navbar.vue"
-import Skills from "@/components/skills.vue"
-import { onMounted, onUnmounted } from '@vue/runtime-core';
+import Navbar from "@/components/basic/navbar.vue";
+import Gate from "@/components/gate.vue";
+import Skills from "@/components/skills.vue";
+import Personal from "@/components/personal.vue";
+import Portfolio from "@/components/portfolio.vue";
+import { onMounted, onUnmounted } from 'vue';
 export default {
   name: "main",
 
   components: {
     Navbar,
+    Gate,
     Skills,
+    Personal,
+    Portfolio
   },
 
   setup() {
-    
     onMounted(() => {
-      add_scroll_color_event([255, 193, 193], '.wrapper')
+      // add_scroll_color_event([255, 193, 193], '.wrapper')
     }) 
 
     onUnmounted(() => {
@@ -59,7 +64,7 @@ function add_scroll_color_event (center_rgb, selector) {
   height: 400vh;
   // text-align: center;
   display: flex;
-  justify-content: center
+  justify-content: center;
 }
 
 .content {
@@ -71,6 +76,7 @@ function add_scroll_color_event (center_rgb, selector) {
 
 .section {
   height: 100vh;
+  // margin-top: 3.25rem;
 }
 </style>
 

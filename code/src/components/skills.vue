@@ -1,6 +1,6 @@
 <template>
   <section class="skills">
-    <div>
+    <div class="skills__title-wrapper">
       <h1 class="skills__title">My skills</h1>
     </div>
     <div class="skills__content">
@@ -54,6 +54,9 @@ function add_scroll_position_event (center_rgb, selector) {
 
 <style lang="scss" scoped>
 
+  $skill-text-color: rgba(154, 205, 50);
+  $skill-mask-color: rgba(188, 238, 104, .75);
+
   h1 {
     // position: absolute;
     font-size: 10rem;
@@ -63,14 +66,13 @@ function add_scroll_position_event (center_rgb, selector) {
     width: 1280px;
     height: 120vh;
     margin: 0 auto;
+    position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    // background: rgba(248,211,216,.75);
 
     &__title {
-      position: sticky;
-      top: 30rem;
-      color: #e77d5d;  
+      position: absolute;
+      color: $skill-text-color;  
 
       &::before {
         content: '';
@@ -79,7 +81,7 @@ function add_scroll_position_event (center_rgb, selector) {
         width: 60vw;
         height: 5rem;
         top: -3rem;
-        background: rgba(248,211,216,.75);;
+        background: $skill-mask-color;
       }
 
       &::after {
@@ -89,8 +91,7 @@ function add_scroll_position_event (center_rgb, selector) {
         width: 60vw;
         height: 300vh;
         top: 15rem;
-        // left: 40rem;
-        background: rgba(248,211,216,.75);;
+        background: $skill-mask-color;;
       }
     }
 
@@ -99,7 +100,7 @@ function add_scroll_position_event (center_rgb, selector) {
       line-height: 8rem;
       margin-top: 5rem;
       text-align: right;
-      color: #e77d5d;  
+      color: $skill-text-color;  
       
     }
   }
