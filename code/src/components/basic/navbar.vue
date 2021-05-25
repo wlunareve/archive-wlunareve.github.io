@@ -45,6 +45,7 @@
     justify-content: center;
     align-items: center;
     background: white;
+    z-index: 1;
 
     &__title {
       font-size: 1.5rem;

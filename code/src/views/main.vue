@@ -5,7 +5,7 @@
       <Gate class="section"></Gate>
       <Skills></Skills>
       <Personal class="section"></Personal>
-      <Portfolio class="section"></Portfolio>
+      <Portfolio></Portfolio>
     </div>
   </main>
 </template>
@@ -61,7 +61,6 @@ function add_scroll_color_event (center_rgb, selector) {
 <style lang="scss" scoped>
 .wrapper {
   width: 100vw;
-  height: 400vh;
   // text-align: center;
   display: flex;
   justify-content: center;
