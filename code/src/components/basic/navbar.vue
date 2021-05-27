@@ -36,10 +36,10 @@
 
 <style lang="scss" scoped>
   .nav {
-    width: 100vw;
+    width: 88%;
     min-height: 3.25rem;
     position: fixed;
-    left: 0;
+    left: 6%;
     border-bottom: 1px solid #dbdbdb;
     display: flex;
     justify-content: center;
