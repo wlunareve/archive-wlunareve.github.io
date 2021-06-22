@@ -30,17 +30,23 @@ export default {
     ]
 
     const create_skill_item_observer = () => {
-      const be_moved_dom = document.querySelector('.skills__title')
+      const be_moved_dom = document.querySelector('.skills__content')
+      const skills_top = window.scrollY
 
-      const callback = (entries, observer) => {
-        const top = entries[0].boundingClientRect.top
-        console.log(top)
-        // be_moved_dom.style.transform = `translateY(${top}px)`
+      const control_scroll_event_listener = (entries, observer) => {
+        const translate_skill_content = e => {
+          const last_known_scroll_position = window.scrollY
+          const translateY_value = (skills_top - last_known_scroll_position) / 4
+          be_moved_dom.style.transform = `translateY(${translateY_value}px)`
+        }
+        if (entries[0].isIntersecting) {
+          window.addEventListener('scroll', translate_skill_content)
+        } else {
+          window.removeEventListener('scroll', translate_skill_content)
+        }
       }
-      // 製作鈴鐺：建立一個 intersection observer，帶入相關設定資訊
-      const observer = new IntersectionObserver(callback)
+      const observer = new IntersectionObserver(control_scroll_event_listener)
       
-      // 設定觀察對象：告訴 observer 要觀察哪個目標元素
       observer.observe(be_moved_dom)  
     }
     
@@ -117,7 +123,7 @@ export default {
         display: block;
         position: absolute;
         width:70vw;
-        height: 100%;
+        height: 50vh;
         top: 15rem;
         background: $skill-mask-color;;
       }
