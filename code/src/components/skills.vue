@@ -1,5 +1,5 @@
 <template>
-  <section class="skills">
+  <section class="skills" ref="skills_dom">
     <div class="skills__pinner">
       <div class="skills__title-wrapper">
         <h1 class="skills__title">My skills</h1>
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 export default {
   setup() {
     const skills = [
@@ -28,20 +28,26 @@ export default {
       'NightWatch',
       'Docker',
     ]
+    const skills_dom = ref(null)
 
     const create_skill_item_observer = () => {
       const be_moved_dom = document.querySelector('.skills__content')
       const skills_top = window.scrollY
+      const skills_height = skills_dom.value.offsetHeight
+
+      const translate_skill_content = e => {
+        const last_known_scroll_position = window.scrollY
+        const translateY_value = (skills_top - last_known_scroll_position) / skills_height  * 800
+        console.log(translateY_value)
+        be_moved_dom.style.transform = `translateY(${translateY_value}px)`
+      }
 
       const control_scroll_event_listener = (entries, observer) => {
-        const translate_skill_content = e => {
-          const last_known_scroll_position = window.scrollY
-          const translateY_value = (skills_top - last_known_scroll_position) / 4
-          be_moved_dom.style.transform = `translateY(${translateY_value}px)`
-        }
         if (entries[0].isIntersecting) {
+          console.log(translate_skill_content)
           window.addEventListener('scroll', translate_skill_content)
         } else {
+          console.log(translate_skill_content)
           window.removeEventListener('scroll', translate_skill_content)
         }
       }
@@ -50,10 +56,13 @@ export default {
       observer.observe(be_moved_dom)  
     }
     
-    onMounted(() => create_skill_item_observer())
+    onMounted(() => {
+      create_skill_item_observer()
+    })
 
     return {
-      skills
+      skills,
+      skills_dom
     }
   }
 }
