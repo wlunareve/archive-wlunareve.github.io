@@ -21,7 +21,7 @@ export default {
 
 <style lang="scss" scoped>
   .cv {
-    // margin: 2rem 0 0 0;
+    max-width: 1280px;
     display: grid;
     grid-template-columns: 15rem 1fr;
     height: calc(100vh - 3.25rem)
