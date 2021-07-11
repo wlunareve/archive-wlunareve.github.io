@@ -21,28 +21,24 @@
       了解: 閱讀過文章，積極應用中
       具備: 擁有獨立完成作業的經驗
       熟悉: 大體上能快速找到問題，甚至指導別人完成工作
-      <Article
-        title="FrontEnd"
-        :li_contents="[
-          'HTML 了解 Semantic HTML',
-          'Javascript 了解 Funtional Programming，能適當撰寫可複用程式碼',
-          'CSS/Scss 能透過 BEM 命名元件，適當切割元件',
-          'Vue/Vuex/VueRouter/vue-i18n 專案經驗以 Vue2 為主，在 Side Project 使用 composition API 作為練習',
-          'leaflet 介接 geoJson 搭配 openStreetMap 達成台灣各地資料展現',
-          'd3 能將資料繪製成柱狀、線狀圖，提供資料視覺化表現',
-          'Jest 曾使用 jest 進行 vue 相關的單元測試',
-          'NightWatch 曾使用 Nightwatch 進行 E2E 測試',
-        ]"
-      />
-      <Article
-        title="Tool"
-        :li_contents="[
-          'Git 具備基本指令操作能力，能應用 semantic commit 進行版控，了解 github flow',
-          'Webpack 具有前端網站 config 調整經驗，能獨立完成版本更新工作',
-          'Vite 將團隊函式庫組件轉換至 vite ，增進團隊工作效率',
-          'Docker 具備基本指令操作能力 能夠撰寫 compose ',
-        ]"
-      />
+      <h2>
+        Front End
+      </h2>
+      <Skill v-for="frontEndSkill in frontEndSkills" :key="frontEndSkill.name"
+        :name='frontEndSkill.name'
+        :description='frontEndSkill.description'
+        :level='frontEndSkill.level'
+      >
+      </Skill>
+      <h2>
+        Tool
+      </h2>
+      <Skill v-for="toolSkill in toolSkills" :key="toolSkill.name"
+        :name='toolSkill.name'
+        :description='toolSkill.description'
+        :level='toolSkill.level'
+      >
+      </Skill>
     </section>
 
     <section class="cv-content__section article" >
@@ -83,29 +79,84 @@
 
 <script>
 import Article from "@/components/cv/article.vue"
+import Skill from "@/components/cv/skill.vue"
 export default {
   name: 'cv-content',
 
   components: {
-    Article
+    Article,
+    Skill,
   },
 
   setup() {
-    const skills = [
-      'HTML',
-      'Javascript',
-      'CSS/SCSS',
-      'Vue',
-      'Funtional Programming',
-      'Webpack',
-      'Vite',
-      'Jest',
-      'NightWatch',
-      'Docker',
+    const frontEndSkills = [
+      {
+        name: 'HTML',
+        description: '了解 Semantic HTML',
+        level: 1
+      },
+      {
+        name: 'Javascript',
+        description: '了解 Funtional Programming，能適當撰寫可複用程式碼',
+        level: 3
+      },
+      {
+        name: 'CSS/Scss',
+        description: '能透過 BEM 命名元件，適當切割元件',
+        level: 2
+      },
+      {
+        name: 'Vue/Vuex/VueRouter/vue-i18n',
+        description: '專案經驗以 Vue2 為主，在 Side Project 使用 composition API 作為練習',
+        level: 2
+      },
+      {
+        name: 'leaflet',
+        description: '介接 geoJson 搭配 openStreetMap 達成台灣各地資料展現',
+        level: 2
+      },
+      {
+        name: 'd3',
+        description: '能將資料繪製成柱狀、線狀圖，提供資料視覺化表現',
+        level: 2
+      },
+      {
+        name: 'Jest',
+        description: '曾使用 jest 進行 vue 相關的單元測試',
+        level: 1
+      },
+      {
+        name: 'NightWatch',
+        description: '曾使用 Nightwatch 進行 E2E 測試',
+        level: 1
+      },
     ]
 
+    const toolSkills = [
+      {
+        name: 'Git',
+        description: '具備基本指令操作能力，能應用 semantic commit 進行版控，了解 github flow',
+        level: 2
+      },
+      {
+        name: 'Webpack',
+        description: '具有前端網站 config 調整經驗，能獨立完成版本更新工作',
+        level: 2
+      },
+      {
+        name: 'Vite',
+        description: '將團隊函式庫組件轉換至 vite ，增進團隊工作效率',
+        level: 1
+      },
+      {
+        name: 'Docker',
+        description: '具備基本指令操作能力 能夠撰寫 compose',
+        level: 2
+      },
+    ]
     return {
-      skills
+      frontEndSkills,
+      toolSkills,
     }
   }
 }
