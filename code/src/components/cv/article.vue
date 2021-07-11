@@ -36,17 +36,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import '../../css/color';
+
   .article {
     display: flex;
     flex-direction: column;
-    
+
     &__title {
       font-size: 1.5rem;
     }
-    
-    &__subtitle { 
-      color: gray;
+
+    &__subtitle {
       text-indent: 2rem;
+      color: $gray;
     }
 
     ul {
@@ -54,7 +56,7 @@ export default {
     }
 
     li {
-      margin: 0rem 2rem;
+      margin: 0 2rem;
       line-height: 1.68;
     }
   }

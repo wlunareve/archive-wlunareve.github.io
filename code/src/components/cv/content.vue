@@ -92,16 +92,16 @@ export default {
 
   setup() {
     const skills = [
-        'HTML',
-        'Javascript',
-        'CSS/SCSS',
-        'Vue',
-        'Funtional Programming',
-        'Webpack',
-        'Vite',
-        'Jest',
-        'NightWatch',
-        'Docker',
+      'HTML',
+      'Javascript',
+      'CSS/SCSS',
+      'Vue',
+      'Funtional Programming',
+      'Webpack',
+      'Vite',
+      'Jest',
+      'NightWatch',
+      'Docker',
     ]
 
     return {
@@ -112,24 +112,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import '../../css/color';
+
   .cv-content {
     margin: 0 1rem;
 
     &__section {
-      margin: 0 0 0.5rem 0; 
+      margin: 0 0 .5rem;
     }
 
     &__title {
-      font-size: 2rem;
       position: relative;
+      font-size: 2rem;
 
       &::after {
-        content: '';
-        width: 100%;
-        display: block;
         position: absolute;
         top: 36px;
-        border-top: 2px solid gray;
+        display: block;
+        content: '';
+        width: 100%;
+        border-top: 2px solid $gray;
       }
     }
   }
@@ -137,14 +139,14 @@ export default {
   .article {
     display: flex;
     flex-direction: column;
-    
+
     &__title {
       font-size: 1.5rem;
     }
-    
-    &__subtitle { 
-      color: gray;
+
+    &__subtitle {
       text-indent: 2rem;
+      color: $gray;
     }
 
     ul {
@@ -153,7 +155,7 @@ export default {
     }
 
     li {
-      margin: 0rem 2rem;
+      margin: 0 2rem;
       line-height: 1.68;
     }
   }

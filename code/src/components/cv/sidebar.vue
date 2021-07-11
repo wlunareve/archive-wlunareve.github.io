@@ -37,46 +37,48 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  $sidebar-background-color: #084c41;
+
   .cv-sidebar {
-    margin: 0 0 2rem 0;
-    height: 100%;
-    background-color: #084C41;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 0 2rem;
+    height: 100%;
     color: #fff;
+    background-color: $sidebar-background-color;
 
     &__title {
-      margin: 2rem 0 0 0;
+      margin: 2rem 0 0;
       font-size: 2rem;
     }
   }
 
   .skills {
-    margin: 2rem 0 0 0;
     display: flex;
     flex-direction: column;
+    margin: 2rem 0 0;
 
     &__title {
       font-size: 1.5rem;
     }
 
     &__item {
-       line-height: 2;
+      line-height: 2;
     }
   }
 
   .details {
-    margin: 2rem 0 0 0;
     display: flex;
     flex-direction: column;
+    margin: 2rem 0 0;
 
     &__title {
       font-size: 1.5rem;
     }
 
     &__item {
-       line-height: 2;
+      line-height: 2;
     }
   }
 </style>
