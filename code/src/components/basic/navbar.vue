@@ -36,15 +36,15 @@
 
 <style lang="scss" scoped>
   .nav {
-    width: 88%;
-    min-height: 3.25rem;
     position: fixed;
     left: 6%;
-    border-bottom: 1px solid #dbdbdb;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background: white;
+    justify-content: center;
+    width: 88%;
+    min-height: 3.25rem;
+    border-bottom: 1px solid #dbdbdb;
+    background: #fff;
     z-index: 1;
 
     &__title {
@@ -53,9 +53,9 @@
     }
 
     &__container {
-      width: 1680px;
       display: flex;
       justify-content: space-between;
+      width: 1680px;
     }
 
     &__link {
@@ -64,12 +64,12 @@
     }
   }
 
-  .nav::hover {
-    background-color: #f9f8f7
+  .nav:hover {
+    background-color: #f9f8f7;
   }
 
   .icon {
-    font-size: 1.5rem;
     padding: 0 1rem;
+    font-size: 1.5rem;
   }
 </style>
