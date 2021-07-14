@@ -1,7 +1,12 @@
 <template>
   <div class="skill">
-    <h3 class="skill__name">{{ name }}</h3>
-    <p>
+    <div class="title">
+      <i class="title__icon"
+        :class="[ icon.source, icon.name ]"
+      />
+      <h3 class="title__name">{{ name }}</h3>
+    </div>
+    <p class="skill__description">
       {{ description }}
     </p>
     <div class="skill__level">
@@ -22,6 +27,11 @@ export default {
   name: 'skill',
 
   props: {
+    icon: {
+      name: String,
+      default: ''
+    },
+
     name: {
       name: String,
       required: true
@@ -56,9 +66,11 @@ export default {
   .skill {
     display: flex;
     flex-direction: column;
+    margin: 0 1rem 1rem 0;
 
-    &__name {
-      font-size: 1.2rem;
+    &__description {
+      margin: .5rem 0;
+      min-height: 3rem;
     }
 
     &__level {
@@ -68,6 +80,7 @@ export default {
         margin: 0 .2rem;
         width: 3rem;
         height: .5rem;
+        font-size: .75rem;
         background: $gray;
         transform: skewX(27.5deg);
 
@@ -75,6 +88,20 @@ export default {
           background: $skill-active;
         }
       }
+    }
+  }
+
+  .title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &__icon {
+      margin-right: .5rem;
+    }
+
+    &__name {
+      font-size: 1rem;
     }
   }
 </style>
