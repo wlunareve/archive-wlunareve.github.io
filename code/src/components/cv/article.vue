@@ -1,38 +1,47 @@
 <template>
   <div class="article">
-    <h2 class="article__title">{{ title }}</h2>
-    <p class="article__subtitle">{{ subtitle }}</p>
+    <h2 class="article__title">
+      {{ title }}
+    </h2>
+    <p class="article__subtitle">
+      {{ subtitle }}
+    </p>
     <ul>
-      <li v-for="(li_content, index) in li_contents" :key="index">{{li_content}}</li>
+      <li v-for="(li_content, index) in liContents" 
+        :key="index"
+      >
+        {{ li_content }}
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'article',
+  export default {
+    name: 'Article',
 
-  props: {
-    title: {
-      type: String,
-      required: true
+    props: {
+      title: {
+        type: String,
+        required: true
+      },
+
+      subtitle: {
+        type: String,
+        default: '',
+      },
+      
+      liContents: {
+        type: Array,
+        required: true
+      }
     },
 
-    subtitle: {
-      type: String
-    },
-    
-    li_contents: {
-      type: Array,
-      required: true
-    }
-  },
+    // setup(props) {
 
-  // setup(props) {
-
-  //   return 
-  // }
-}
+    //   return 
+    // }
+  }
 </script>
 
 <style lang="scss" scoped>

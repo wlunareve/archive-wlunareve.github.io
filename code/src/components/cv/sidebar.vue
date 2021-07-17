@@ -1,5 +1,7 @@
 <template>
-  <aside id="cv-sidebar" class="cv-sidebar">
+  <aside id="cv-sidebar" 
+    class="cv-sidebar"
+  >
     <span class="cv-sidebar__title">
       宋明謙 
     </span>
@@ -27,13 +29,13 @@
 </template>
 
 <script>
-export default {
-  name: 'cv-sidebar',
+  export default {
+    name: 'CvSidebar',
 
-  setup() {
-    
+    setup() {
+      
+    }
   }
-}
 </script>
 
 <style lang="scss" scoped>

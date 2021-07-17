@@ -1,29 +1,29 @@
 <template>
   <div class="cv">
-    <Sidebar></Sidebar>
-    <Content></Content>
+    <Sidebar />
+    <Content />
   </div>
 </template>
 
 <script>
-import Sidebar from "@/components/cv/sidebar.vue"; 
-import Content from "@/components/cv/content.vue"; 
+  import Sidebar from "@/components/cv/sidebar.vue"; 
+  import Content from "@/components/cv/content.vue"; 
 
-export default {
-  name: 'cv',
+  export default {
+    name: 'CV',
 
-  components: {
-    Sidebar,
-    Content,
-  },
-}
+    components: {
+      Sidebar,
+      Content,
+    },
+  }
 </script>
 
 <style lang="scss" scoped>
   .cv {
-    max-width: 1280px;
     display: grid;
     grid-template-columns: 15rem 1fr;
-    height: calc(100vh - 3.25rem)
+    max-width: 1280px;
+    height: calc(100vh - 3.25rem);
   }
 </style>
