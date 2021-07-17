@@ -6,17 +6,12 @@
       <h1 class="cv-content__title profile">
         Profile
       </h1>
-      <p class="profile__content">
-        我是 ToD，是一個務實的人，在職場工作上我認為是一個互利共生的關係，可以獨立解決問題，也能與夥伴良好合作，
-      </p>
-      <p>
-        平常研究的手段是閱讀技術文章、雜誌，目前想要努力朝向分享前進。
-      </p>
-      <p class="profile__content">
-        對做出具實用性的產品有高度興趣，正積極於寫出可複用，少技術債的程式碼，
-      </p>
-      <p class="profile__content">
-        目前正尋找有良好開發流程的公司，希望能找到志同道合的夥伴，同時我付出的是自己面對問題、解決問題，善於學習的能力。
+      <p 
+        v-for="(profileContent, index) in profileContents"
+        :key="index"
+        class="profile__content"
+      >
+        {{ profileContent }}
       </p>
     </section>
 
@@ -119,6 +114,15 @@
     },
 
     setup() {
+      const profileContents = [
+        "我是 Tod，是一個務實的人，可以獨立解決問題，也能與夥伴良好合作，",
+        "平常學習的手段是閱讀技術文章、雜誌，目前努力朝積極分享邁進",
+        "對做出具實用性的產品有高度興趣，追求寫出可複用，少技術債的程式碼。",
+        "在職場工作的觀點，我認為是一個互利共生的關係，",
+        "與夥伴共同學習、進步，增進個人能力，同時間也開發出優秀、實用性高的產品，是我理想的工作環境。",
+        "目前正尋找有良好開發流程的公司，希望能找到志同道合的夥伴，同時我付出的是自己面對問題、解決問題，善於學習的能力。",
+      ]
+
       const frontEndSkills = [
         {
           name: 'HTML',
@@ -240,6 +244,7 @@
       }
 
       return {
+        profileContents,
         frontEndSkills,
         toolSkills,
         isShowSkillExplanation,
