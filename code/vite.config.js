@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import Markdown from 'vite-plugin-md'
 
 import { resolve } from 'path'
 
@@ -9,10 +10,16 @@ const pathResolve = (dir) => {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue({
+      include: [/\.vue$/, /\.md$/],
+    }),
+    Markdown()
+  ],
   resolve: {
     alias: {
-      '@': pathResolve('src')
+      '@': pathResolve('src'),
+      '@md': pathResolve('markdown')
     }
   },
   build: {
