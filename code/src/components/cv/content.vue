@@ -25,7 +25,7 @@
       <div v-if="isShowSkillExplanation"
         class="skill__explanation"
       >
-        <span>閱讀過文章，積極應用、內化中</span>
+        <span>閱讀過文章，積極應用、內化、融入到經驗中</span>
         <div class="skill__level">
           <div v-for="(levelItem, index) in [...Array(3)]"
             :key="index"
@@ -35,7 +35,7 @@
             }"
           />
         </div>
-        <span>擁有獨立完成作業的經驗</span>
+        <span>可以自行處理問題、擁有獨立完成作業的經驗</span>
         <div class="skill__level">
           <div v-for="(levelItem, index) in [...Array(3)]"
             :key="index"
@@ -45,7 +45,7 @@
             }"
           />
         </div>
-        <span>大體上能快速找到問題，且能有效幫忙別人 debug</span>
+        <span>能快速找到問題，或能幫忙別人偵錯異常狀況</span>
         <div class="skill__level">
           <div v-for="(levelItem, index) in [...Array(3)]"
             :key="index"
@@ -160,15 +160,17 @@
           icon: {
             source: 'fab',
             name: 'fa-js',
+            color: '#EFD81D'
           },
         },
         {
           name: 'CSS/Scss',
-          description: '能透過 BEM 命名元件，適當切割元件',
+          description: '使用 BEM 命名，適當切割元件，也嘗試於使用 Utility base 的方式命名',
           level: 2,
           icon: {
             source: 'fab',
-            name: 'fa-css3',
+            name: 'fa-css3-alt',
+            color: '#016CB4'
           },
         },
         {
@@ -178,6 +180,7 @@
           icon: {
             source: 'fab',
             name: 'fa-vuejs',
+            color: '#00BB7C'
           },
         },
         {
@@ -187,6 +190,7 @@
           icon: {
             source: 'far',
             name: 'fa-map',
+            color: 'green',
           },
         },
         {
@@ -196,24 +200,27 @@
           icon: {
             source: 'fas',
             name: 'fa-chart-line',
+            color: '#EF8648',
           },
         },
         {
           name: 'Jest',
-          description: '曾使用 jest, @vue/unit-jest 進行單元測試',
+          description: '使用過 jest, @vue/unit-jest 進行單元測試',
           level: 1,
           icon: {
             source: 'fas',
             name: 'fa-file-alt',
+            color: '#944058'
           },
         },
         {
           name: 'NightWatch',
-          description: '曾使用 Nightwatch 進行 E2E 測試',
+          description: '使用過 Nightwatch 進行 E2E 測試',
           level: 1,
           icon: {
             source: 'fas',
             name: 'fa-file-alt',
+            color: '#4D2C16'
           },
         },
       ]
@@ -226,6 +233,7 @@
           icon: {
             source: 'fas',
             name: 'fa-code-branch',
+            color: '#EB4D28'
           },
         },
         {
@@ -235,6 +243,7 @@
           icon: {
             source: 'far',
             name: 'fa-file-archive',
+            color: '#1B74BA'
           },
         },
         {
@@ -244,6 +253,7 @@
           icon: {
             source: 'far',
             name: 'fa-file-archive',
+            color: '#F7C23B'
           },
         },
         {
@@ -253,6 +263,7 @@
           icon: {
             source: 'fab',
             name: 'fa-docker',
+            color: '#2391E6'
           },
         },
       ]
@@ -275,6 +286,7 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '../../css/RWD_mixin';
   @import '../../css/color';
 
   .cv-content {
@@ -334,11 +346,17 @@
 
   .skill {
     &__explanation {
-      position: absolute;
-      right: 0;
+      position: static;
       display: flex;
       flex-direction: column;
+      align-items: flex-end;
       row-gap: .3rem;
+
+      @include full-width {
+        position: absolute;
+        right: 0;
+        align-items: flex-start;
+      }
     }
 
     &__title {
