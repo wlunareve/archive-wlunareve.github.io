@@ -3,8 +3,13 @@
     <div class="title">
       <i class="title__icon"
         :class="[ icon.source, icon.name ]"
+        :style="{
+          'color': icon.color
+        }"
       />
-      <h3 class="title__name">{{ name }}</h3>
+      <h3 class="title__name">
+        {{ name }}
+      </h3>
     </div>
     <p class="skill__description">
       {{ description }}
@@ -22,41 +27,41 @@
 </template>
 
 <script>
-import { ref, computed } from 'vue'
-export default {
-  name: 'skill',
+  import { ref, computed } from 'vue'
+  export default {
+    name: 'Skill',
 
-  props: {
-    icon: {
-      name: String,
-      default: ''
+    props: {
+      icon: {
+        type: Object,
+        default: () => ({})
+      },
+
+      name: {
+        type: String,
+        required: true
+      },
+
+      description: {
+        type: String,
+        required: true
+      },
+      
+      level: {
+        type: Number,
+        required: true
+      }
     },
 
-    name: {
-      name: String,
-      required: true
-    },
+    setup() {
+      const TOTAL_LEVEL_COUNT = ref(3)
+      const levelArray = computed(() => [...Array(TOTAL_LEVEL_COUNT.value)])
 
-    description: {
-      type: String,
-      required: true
-    },
-    
-    level: {
-      type: Number,
-      required: true
-    }
-  },
-
-  setup(props) {
-    const TOTAL_LEVEL_COUNT = ref(3)
-    const levelArray = computed(() => [...Array(TOTAL_LEVEL_COUNT.value)])
-
-    return {
-      levelArray
+      return {
+        levelArray
+      }
     }
   }
-}
 </script>
 
 <style lang="scss" scoped>
