@@ -25,15 +25,33 @@
       <div v-if="isShowSkillExplanation"
         class="skill__explanation"
       >
+        <span>閱讀過文章，積極應用、內化中</span>
+        <div class="skill__level">
+          <div v-for="(levelItem, index) in [...Array(3)]"
+            :key="index"
+            class="skill__level-item"
+            :class="{
+              'skill__level-item--active': index <= 0
+            }"
+          />
+        </div>
+        <span>擁有獨立完成作業的經驗</span>
+        <div class="skill__level">
+          <div v-for="(levelItem, index) in [...Array(3)]"
+            :key="index"
+            class="skill__level-item"
+            :class="{
+              'skill__level-item--active': index <= 1
+            }"
+          />
+        </div>
+        <span>大體上能快速找到問題，且能有效幫忙別人 debug</span>
         <div class="skill__level">
           <div v-for="(levelItem, index) in [...Array(3)]"
             :key="index"
             class="skill__level-item skill__level-item--active"
           />
         </div>
-        <span>了解: 閱讀過文章，積極應用中</span>
-        <span>具備: 擁有獨立完成作業的經驗</span>
-        <span>熟悉: 大體上能快速找到問題，甚至指導別人完成工作</span>
       </div>
       <h2 class="skill__title">
         Front End
@@ -81,6 +99,7 @@
       </h1>
       <Article
         title="Qplus 劇烈天氣監測系統"
+        title-link="https://qpeplus.cwb.gov.tw/pub/"
         subtitle="系統根據不同的使用單位，提供各式各樣不同的客製化氣象變數產品 JS + Vue + SCSS + BEM + Webpack"
         :li-contents="[
           '在職期間主動重構前端程式碼，提高客製化的擴充性',
@@ -91,6 +110,7 @@
       />
       <Article
         title="Open Data 氣象資料開發平臺"
+        title-link="https://opendata.cwb.gov.tw/index"
         subtitle="氣象局 open data api 的資料展示介紹網站 Vue + Node JS"
         :li-contents="[
           '承接他組開發網頁，處理日常網頁前後端的維護工作',
@@ -126,7 +146,7 @@
       const frontEndSkills = [
         {
           name: 'HTML',
-          description: '了解 Semantic HTML',
+          description: '了解 Semantic HTML，積極應用於平常撰寫上',
           level: 1,
           icon: {
             source: 'fas',
@@ -153,7 +173,7 @@
         },
         {
           name: 'Vue',
-          description: '專案經驗以 Vue2 為主，在 Side Project 使用 composition API 作為練習',
+          description: '專案經驗以 Vue2 為主，目前在 Side Project 使用 composition API 作為練習',
           level: 2,
           icon: {
             source: 'fab',
@@ -180,7 +200,7 @@
         },
         {
           name: 'Jest',
-          description: '曾使用 jest 進行 vue 相關的單元測試',
+          description: '曾使用 jest, @vue/unit-jest 進行單元測試',
           level: 1,
           icon: {
             source: 'fas',
@@ -318,11 +338,13 @@
       right: 0;
       display: flex;
       flex-direction: column;
+      row-gap: .3rem;
     }
 
     &__title {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       font-weight: bold;
+      line-height: 2;
     }
 
     &__wrapper {

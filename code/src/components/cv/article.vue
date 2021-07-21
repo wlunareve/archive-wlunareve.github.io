@@ -1,6 +1,17 @@
 <template>
   <div class="article">
-    <h2 class="article__title">
+    <a v-if="titleLink" 
+      :href="titleLink"
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <h2 class="article__title">
+        {{ title }}
+      </h2>
+    </a>
+    <h2 v-else
+      class="article__title"
+    >
       {{ title }}
     </h2>
     <p class="article__subtitle">
@@ -27,6 +38,11 @@
       },
 
       subtitle: {
+        type: String,
+        default: '',
+      },
+
+      titleLink: {
         type: String,
         default: '',
       },
