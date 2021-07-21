@@ -5,7 +5,11 @@
       target="_blank" 
       rel="noopener noreferrer"
     >
-      <h2 class="article__title">
+      <h2 class="article__title"
+        :class="{
+          'article__title--has-link': titleLink
+        }"
+      >
         {{ title }}
       </h2>
     </a>
@@ -69,6 +73,11 @@
 
     &__title {
       font-size: 1.5rem;
+
+      &--has-link:hover {
+        transform: translateY(-.1rem);
+        color: #084c41;
+      }
     }
 
     &__subtitle {
