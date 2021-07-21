@@ -6,6 +6,12 @@ const routes = [
     name: "Main",
     component: () => import("@/views/main.vue"),
   },
+  {
+    path: "/markdown",
+    name: "Markdown",
+    component: () => import("@/views/markdown.vue"),
+  },
+
 ];
 
 export default createRouter({
