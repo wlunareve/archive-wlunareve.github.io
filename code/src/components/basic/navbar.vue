@@ -1,15 +1,30 @@
 <template>
   <nav class="nav">
     <div class="nav__container">
-      <a href="/" class="nav__title">ToD</a>
-      <div class="nav__link">
-        <a v-for="({ name, link }) in links" :key="name" 
+      <div class="tab">
+        <router-link to="/" 
+          class="nav__title tab__item"
+        >
+          ToD
+        </router-link>
+        <router-link v-for="({ name, link }) in tabs "
+          :key="name"
+          :to="link"
+          class="tab__item"
+        >
+          {{ name }}
+        </router-link>
+      </div>
+      <div class="nav__social-media">
+        <a v-for="({ name, link }) in socialMegias" 
+          :key="name" 
           :href="link" 
-          target="_blank" rel="noopener noreferrer"
+          target="_blank" 
+          rel="noopener noreferrer"
         >
           <i class="icon fab"
             :class="name"
-          ></i>
+          />
         </a>
       </div>
     </div>
@@ -21,27 +36,34 @@
     name: "navbar",
 
     setup() {
-      const links = [
+      const tabs = [
+        { name:  '詳細清單', link: '/markdown'},
+        { name:  '關於我', link: '/cv'},
+      ]
+
+      const socialMegias = [
         { name:  'fa-github', link: 'https://github.com/wlunareve'},
         { name:  'fa-linkedin-in', link: 'https://www.linkedin.com/in/%E6%98%8E%E8%AC%99-%E5%AE%8B-982b30172/'},
         { name:  'fa-instagram', link: 'https://www.instagram.com/sung35680/?hl=zh-tw'},
       ]
 
       return {
-        links
+        tabs,
+        socialMegias
       }
     }
 };
 </script>
 
 <style lang="scss" scoped>
+  @import '../../css/color';
+
   .nav {
     position: fixed;
-    left: 6%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 88%;
+    width: 1680px;
     min-height: 3.25rem;
     border-bottom: 1px solid #dbdbdb;
     background: #fff;
@@ -58,15 +80,27 @@
       width: 1680px;
     }
 
-    &__link {
+    &__social-media {
       display: flex;
       align-items: center;
     }
   }
 
-  .nav:hover {
-    background-color: #f9f8f7;
+  .tab {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.35rem;
+    font-weight: 500;
+
+    &__item:hover {
+      color: $skill-active;
+    }
   }
+
+  // .nav:hover {
+  //   background-color: #f9f8f7;
+  // }
 
   .icon {
     padding: 0 1rem;
