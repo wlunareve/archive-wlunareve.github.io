@@ -84,11 +84,19 @@
         Employment History
       </h1>
       <Article
-        title="資拓宏宇國際股份有限公司-氣象部門"
+        title="資拓宏宇氣象部門-前、全端工程師"
         :li-contents="[
-          '積極參與技術討論，共同增進團隊開發能力，平常會讀技術文章寫成指南或是 best practice 分享給小組',
-          '經常進行技術嘗試，推動技術更迭， 透過調整 webpack 或是嘗試 vite、stylelint、jest 來幫助小組快速開發',
+          '初入公司時目標以全端工程師發展，但職涯上主要以前端工作為主，也漸漸喜歡上處理前端工作',
+          '積極參與技術討論，共同增進團隊開發能力，平常會讀技術文章寫成指南或是 best practice 分享給其他人',
+          '經常進行技術嘗試，推動技術更迭， 透過調整 webpack 或是嘗試 vite、eslint、stylelint、jest 來幫助小組快速開發',
           '做為新人 mentor，幫助上手工作'
+        ]"
+      />
+      <Article
+        title="治略資訊整合股份有限公司-後端實習生"
+        :li-contents="[
+          '擔任後端實習生，幫忙 db 備份，爬蟲工作',
+          '在實習中自主學習 docker，使用 django 開發 api，與兩位位前端實習生合作',
         ]"
       />
     </section>  
@@ -132,6 +140,8 @@
       Article,
       Skill,
     },
+
+    // 之後給每個地方都擴展 dialog
 
     setup() {
       const profileContents = [
