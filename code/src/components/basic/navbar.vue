@@ -33,7 +33,7 @@
   
 <script>
   export default {
-    name: "navbar",
+    name: "Navbar",
 
     setup() {
       const tabs = [
