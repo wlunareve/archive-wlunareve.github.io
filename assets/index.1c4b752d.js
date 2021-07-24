@@ -1,0 +1,1 @@
+import{p as a,a as o,o as s,c as r,b as e,w as n,e as d}from"./vendor.7435bb7f.js";const t={name:"Markdown",setup:()=>(console.log("markdown"),{})},c=n();a("data-v-00f4ba64");const p={id:"markdown",class:"markdown__wrapper"};o();const w=c(((a,o,n,t,c,w)=>{const m=d("router-view");return s(),r("div",p,[e(m)])}));t.render=w,t.__scopeId="data-v-00f4ba64";export default t;
