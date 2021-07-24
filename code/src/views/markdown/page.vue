@@ -10,20 +10,35 @@
 </template>
 
 <script>
+  import markdownList from '@md/list.json'
   import { computed, defineAsyncComponent } from 'vue'
   import { useRoute } from 'vue-router';
+  
+  const capitalizeFirstLetter = (string) => {
+    return `${string.charAt(0).toUpperCase()}${string.slice(1)}`;
+  }
+
+  const generateMarkdownComponents = () => {
+    return markdownList.reduce((components, { path }) => {
+      const key = path
+        .split(/\/|_/)
+        .map(text => capitalizeFirstLetter(text))
+        .join('')
+
+      // can't use Template literals and vite resolve alias
+      return {
+        ...components,
+        [key]: defineAsyncComponent(() => import('/static/markdown/' + path + '.md'))
+      }
+    }, {})
+  }
+
   export default {
     name: "MarkdownPage",
 
-    components: {
-      CommonWebDeveloperRoadmap2020: defineAsyncComponent(() => import('@md/common/web_developer_roadmap_2020.md'))
-    },
+    components: generateMarkdownComponents(),
 
     setup() {
-      const capitalizeFirstLetter = (string) => {
-        return `${string.charAt(0).toUpperCase()}${string.slice(1)}`;
-      }
-
       const route = useRoute()
       const pathList = route.params.path
       const currentArticleComponent = computed(() => {

@@ -47,8 +47,6 @@
     name: "MarkdownList",
 
     setup() {
-      console.log(markdownList)
-
       return {
         markdownList
       }
