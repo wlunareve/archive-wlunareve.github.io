@@ -28,7 +28,7 @@
       // can't use Template literals and vite resolve alias
       return {
         ...components,
-        [key]: defineAsyncComponent(() => import('/static/markdown/' + path + '.md'))
+        [key]: defineAsyncComponent(() => import(`../../../static/markdown/${path}.md`))
       }
     }, {})
   }
