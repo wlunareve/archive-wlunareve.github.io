@@ -37,7 +37,7 @@
 
     setup() {
       const tabs = [
-        { name:  '詳細清單', link: '/markdown'},
+        { name:  '文章清單', link: '/markdown'},
         { name:  '關於我', link: '/cv'},
       ]
 
