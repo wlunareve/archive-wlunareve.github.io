@@ -14,9 +14,18 @@ const routes = [
   {
     path: "/markdown",
     name: "Markdown",
-    component: () => import("@/views/markdown.vue"),
+    component: () => import("@/views/markdown/index.vue"),
+    children: [
+      {
+        path: "",
+        component: () => import("@/views/markdown/list.vue"),
+      },
+      {
+        path: ":path+",
+        component: () => import("@/views/markdown/page.vue"),
+      },
+    ]
   },
-
 ];
 
 export default createRouter({

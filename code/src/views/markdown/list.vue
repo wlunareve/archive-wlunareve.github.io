@@ -12,7 +12,9 @@
           class="article__left-side"
         >
           <router-link 
-            :to="`/markdown/${markdown.path}`" 
+            :to="{
+              path: `/markdown/${markdown.path}`,
+            }"
           >
             <span class="article__title">
               {{ markdown.title }}
@@ -37,21 +39,12 @@
       </article>
     </div>
   </div>
-  <!-- content -->
-  <!-- <HelloWorld /> -->
 </template>
 
 <script>
   import markdownList from '@md/list.json'
-  import HelloWorld from '@md/common/web_developer_roadmap_2020.md'
   export default {
-    name: "Markdown",
-
-    components: {
-      HelloWorld
-    },
-
-    // TODO
+    name: "MarkdownList",
 
     setup() {
       console.log(markdownList)
@@ -64,7 +57,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '../css/color';
+  @import '../../css/color';
 
   .markdown {
     margin: 0 auto;
@@ -73,7 +66,7 @@
 
   .article {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);;
+    grid-template-columns: repeat(4, 1fr);
     margin: 1rem 1rem 2rem;
     color: rgb(117, 117, 117);
     // flex-direction: column;
