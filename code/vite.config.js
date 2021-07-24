@@ -19,7 +19,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': pathResolve('src'),
-      '@md': pathResolve('markdown')
+      '@md': pathResolve('static/markdown')
     }
   },
   build: {
