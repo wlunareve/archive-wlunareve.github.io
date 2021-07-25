@@ -88,3 +88,4 @@
 .markdown-body .csv-data .blob-line-num { padding: 10px 8px 9px; text-align: right; background: #fff; border: 0; }
 .markdown-body .csv-data tr { border-top: 0; }
 .markdown-body .csv-data th { font-weight: bold; background: #f8f8f8; border-top: 0; }
+.markdown-body a { color: #337ab7; text-decoration: none; }
