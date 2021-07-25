@@ -26,6 +26,7 @@
   .wrapper {
     display: flex;
     justify-content: center;
+    text-align: justify;
     // font-family: "Inter", "Roobert", "Helvetica Neue", Helvetica, Arial, sans-serif;
     // -webkit-font-smoothing: antialiased;
     // -moz-osx-font-smoothing: grayscale;
@@ -34,10 +35,11 @@
   .content {
     position: relative;
     margin-top: 3.2rem;
-    width: 1680px;
+    width: 80vw;
+    max-width: 1680px;
 
     @include laptop {
-      width: 1120px;
+      width: 100vw;
     }
   }
 </style>

@@ -20,10 +20,16 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '../css/RWD_mixin';
+
   .cv {
     display: grid;
     grid-template-columns: 15rem 1fr;
     max-width: 1280px;
     height: calc(100vh - 3.25rem);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

@@ -56,6 +56,7 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '../../css/RWD_mixin';
   @import '../../css/color';
 
   .nav {
@@ -63,7 +64,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1680px;
+    width: 100vw;
     min-height: 3.25rem;
     border-bottom: 1px solid #dbdbdb;
     background: #fff;
@@ -77,7 +78,13 @@
     &__container {
       display: flex;
       justify-content: space-between;
-      width: 1680px;
+      width: 80vw;
+      max-width: 1680px;
+
+      @include mobile {
+        padding: 0 .5rem;
+        width: 100vw;
+      }
     }
 
     &__social-media {
@@ -105,5 +112,9 @@
   .icon {
     padding: 0 1rem;
     font-size: 1.5rem;
+
+    @include mobile {
+      font-size: 1rem;
+    }
   }
 </style>

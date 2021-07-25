@@ -27,7 +27,6 @@
     },
 
     // TODO 
-    // 解決線上 static file 的問題
     // 增加 list 篩選跟分頁
     // RWD
     // 寫一篇相關文章，說明如何將 markdown 的內容顯示在私人部落格
