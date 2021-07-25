@@ -19,10 +19,10 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': pathResolve('src'),
-      '@md': pathResolve('static/markdown')
+      '@md': pathResolve('src/assets/markdown')
     }
   },
   build: {
-    outDir: "../"
+    outDir: "../",
   }
 })
