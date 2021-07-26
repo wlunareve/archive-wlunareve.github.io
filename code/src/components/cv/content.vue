@@ -281,7 +281,7 @@
         },
       ]
 
-      const isShowSkillExplanation = ref(true)
+      const isShowSkillExplanation = ref(false)
 
       const showSkillExplanation = () => {
         isShowSkillExplanation.value = !isShowSkillExplanation.value
@@ -364,12 +364,6 @@
       flex-direction: column;
       align-items: flex-end;
       row-gap: .3rem;
-
-      @include full-width {
-        position: absolute;
-        right: 0;
-        align-items: flex-start;
-      }
     }
 
     &__title {
