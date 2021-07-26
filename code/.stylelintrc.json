@@ -27,6 +27,7 @@
           "flex-direction",
           "align-items",
           "justify-content",
+          "gap",
           "float",
           "clear",
           "overflow",
