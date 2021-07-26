@@ -1,21 +1,17 @@
 import { createStore } from "vuex";
 
 export default createStore({
-    state() {
-        return {
-            count: 0,
-        };
-    },
+  state() {
+    return {
+      width: window.innerWidth,
+    };
+  },
 
-    mutations: {
-        increment(state) {
-            state.count++;
-        },
-    },
-    
-    actions: {
-        increment(context) {
-            context.commit("increment");
-        },
-    },
+  mutations: {
+
+  },
+  
+  actions: {
+
+  },
 });
