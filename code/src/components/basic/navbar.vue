@@ -197,13 +197,15 @@
       grid-template-columns: 1fr;
       opacity: 0;
       transition-property: opacity, max-height, top;
-      transition-duration: .5s, 1s, 1s;
+      transition-duration: .5s, .5s, 2s;
       transition-timing-function: linear;
+      visibility: hidden;
 
       &--active {
         top: 0;
         max-height: 100px;
         opacity: 1;
+        visibility: visible;
       }
     }
 
