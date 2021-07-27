@@ -1,11 +1,6 @@
 <template>
-  <!-- list -->
-  <div id="markdown" 
-    class="markdown__wrapper"
-  >
-    <div class="markdown">
-      <component :is="currentArticleComponent" />
-    </div>
+  <div class="markdown">
+    <component :is="currentArticleComponent" />
   </div>
 </template>
 
@@ -49,6 +44,28 @@
   };
 </script>
 
+<style lang="scss" scoped>
+  @import '../../css/RWD_mixin';
+
+  .markdown {
+    margin: 0 auto;
+    max-width: 1280px;
+
+    @include laptop {
+      margin: 0 1rem;
+    }
+  }
+</style>
+
 <style>
   @import '../../css/markdown.css';
+
+  ul {
+    list-style-type: disc;
+  }
+
+  li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+  }
 </style>

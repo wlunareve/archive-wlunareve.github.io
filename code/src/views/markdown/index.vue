@@ -21,9 +21,4 @@
 
 <style lang="scss" scoped>
   @import '../../css/color';
-
-  .markdown {
-    margin: 0 auto;
-    width: 1280px;
-  }
 </style>
