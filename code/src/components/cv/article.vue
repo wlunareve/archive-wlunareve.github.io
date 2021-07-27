@@ -76,13 +76,13 @@
 
       &--has-link:hover {
         transform: translateY(-.1rem);
-        color: #084c41;
+        color: $cyan-darken4;
       }
     }
 
     &__subtitle {
       text-indent: 2rem;
-      color: $gray;
+      color: $grey-darken1;
     }
 
     ul {

@@ -39,7 +39,7 @@
 </script>
 
 <style lang="scss" scoped>
-  $sidebar-background-color: #084c41;
+  @import '../../css/color';
 
   .cv-sidebar {
     display: flex;
@@ -48,7 +48,7 @@
     margin: 0 0 2rem;
     height: 100%;
     color: #fff;
-    background-color: $sidebar-background-color;
+    background-color: $teal-darken4;
 
     &__title {
       margin: 2rem 0 0;

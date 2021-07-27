@@ -66,7 +66,6 @@
 
 <style lang="scss" scoped>
   @import '../../css/color';
-  $skill-active: #084c41;
 
   .skill {
     display: flex;
@@ -86,11 +85,11 @@
         width: 3rem;
         height: .5rem;
         font-size: .75rem;
-        background: $gray;
+        background: $grey-lighten1;
         transform: skewX(27.5deg);
 
         &--active {
-          background: $skill-active;
+          background: $teal-darken4;
         }
       }
     }

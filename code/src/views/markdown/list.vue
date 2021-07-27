@@ -62,7 +62,6 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: 1rem 1rem 2rem;
-    color: rgb(117, 117, 117);
 
     @include laptop {
       display: flex;
@@ -78,7 +77,7 @@
       font-size: 1.5rem;
       font-weight: 700;
       line-height: 2rem;
-      color: rgb(41, 41, 41);
+      color: $article-title;
     }
 
     &__introduction {
@@ -89,6 +88,7 @@
       text-overflow: ellipsis;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
+      color: $grey-darken1;
     }
 
     &__time {
@@ -100,7 +100,7 @@
   .label {
     &__item {
       padding: .125rem .5rem;
-      background-color: rgb(242, 242, 242);
+      background-color: $grey-lighten3;
       border-radius: 100px;
       cursor: pointer;
     }

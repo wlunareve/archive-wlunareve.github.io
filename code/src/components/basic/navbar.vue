@@ -95,7 +95,7 @@
         socialMegias,
       }
     }
-};
+  };
 </script>
 
 <style lang="scss" scoped>
@@ -108,7 +108,7 @@
     justify-content: center;
     width: 100vw;
     min-height: 3.25rem;
-    border-bottom: 1px solid #dbdbdb;
+    border-bottom: 1px solid $grey-lighten1;
     background: #fff;
     z-index: 1;
 
@@ -136,7 +136,7 @@
       font-weight: 800;
 
       &:hover {
-        color: $skill-active;
+        color: $cyan-darken4;
       }
     }
 
@@ -171,7 +171,7 @@
           margin: .1rem 0;
           width: 1rem;
           height: .1rem;
-          background: gray;
+          background: $grey-base;
         }
       }
     }
@@ -183,13 +183,13 @@
 
     &__item {
       :hover {
-        color: $skill-active;
+        color: $teal-darken4;
       }
     }
   }
 
-  .mobile-tab  {
-    &__items { 
+  .mobile-tab {
+    &__items {
       position: relative;
       top: -100%;
       display: grid;
@@ -209,7 +209,7 @@
       }
     }
 
-    &__item { 
+    &__item {
       padding: .2rem .5rem;
       border-top: 1px solid #000;
     }

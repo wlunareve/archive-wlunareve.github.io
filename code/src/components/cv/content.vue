@@ -3,7 +3,7 @@
     class="cv-content"
   >
     <section class="cv-content__section">
-      <h1 class="cv-content__title profile">
+      <h1 class="cv-content__title">
         Profile
       </h1>
       <p 
@@ -322,7 +322,7 @@
         display: block;
         content: '';
         width: 100%;
-        border-top: 2px solid $gray;
+        border-top: 2px solid $grey-lighten2;
       }
     }
   }
@@ -343,7 +343,7 @@
 
     &__subtitle {
       text-indent: 2rem;
-      color: $gray;
+      color: $grey-base;
     }
 
     ul {
@@ -393,11 +393,11 @@
         width: 3rem;
         height: .5rem;
         font-size: .75rem;
-        background: $gray;
+        background: $grey-base;
         transform: skewX(27.5deg);
 
         &--active {
-          background: $skill-active;
+          background: $teal-darken4;
         }
       }
     }
