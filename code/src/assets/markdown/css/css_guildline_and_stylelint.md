@@ -2,13 +2,14 @@
 
 ## 出處
 
-這是我自行整理或是簡單翻譯的筆記，
-為了尊重原作者，或是更詳盡的內容，建議以連結內容為優先
+此文章用於與辦公室的同事分享，
+是我自行整理及簡單白話翻譯的筆記，
+為了尊重原作者亦或是需要更詳盡的內容，建議以連結內容為優先
 
-https://github.com/airbnb/css
-https://github.com/ArvinH/css-style-guide
-https://google.github.io/styleguide/htmlcssguide.html
-https://dotblogs.com.tw/explooosion/2018/09/30/141005
+https://github.com/airbnb/css <br>
+https://github.com/ArvinH/css-style-guide <br>
+https://google.github.io/styleguide/htmlcssguide.html <br>
+https://dotblogs.com.tw/explooosion/2018/09/30/141005 <br>
 
 # Airbnb CSS / Sass 指南
 
@@ -66,7 +67,7 @@ https://dotblogs.com.tw/explooosion/2018/09/30/141005
 
 * 使用 soft tabs (兩個空格）作為縮排。(我自己是四格，覺得影響不大，但是 stylelint 要調整) 
 * 類別名稱建議使用 dashes 代替 camelCasing。如果你使用 BEM，也可以使用底線或 PascalCasing（參考下面的 [OOCSS 和 BEM](#oocss-and-bem)）。
-* 不要使用 ID 選擇器。
+* 不要使用 ID 選擇器。<br>
 (ID 選擇器會影響 css 套用的優先權，在 HTML 的準則中，每個 ID 應該獨一無二)
 * 在一個規則宣告中，若同時使用多個選擇器時，讓每個選擇器各佔一行。
 * 在規則宣告的左大括弧 `{` 前加上一個空格。
@@ -408,6 +409,9 @@ npm install -D stylelint-config-standard
 npm install -D stylelint-config-sass-guidelines
 npm install -D stylelint-order
 ```
+
+個人非常建議套用，雖然剛 import 的時候會有點痛苦，但長久習慣以後會更好<br>
+eslint 以及 vscode extension 也非常推薦
 
 ## 設定檔
 

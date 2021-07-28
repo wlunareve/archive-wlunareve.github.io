@@ -27,8 +27,8 @@
     ]
   },
   {
-    "title": "CSS style 指南",
-    "introduction": "",
+    "title": "CSS style 指南，以及 stylelint",
+    "introduction": "我記錄了數篇文章的內容，提到一些 clean code css 要注意的事情，也補充了 stylelint 的安裝方式。",
     "time": "2021-07-25",
     "path": "css/css_guildline_and_stylelint",
     "labels": [
@@ -47,7 +47,7 @@
   {
     "title": "數個 CSS 變數的使用方式",
     "introduction": "這篇文章的目的是給公司的 UIUX 工程師幾個將 css 變數提出的範例，僅是我目前所知道的方式，最重要的是要根據情境利用各種不同的方式來解決問題。",
-    "time": "2021-07-25",
+    "time": "2021-07-28",
     "path": "css/css_variable_in_company",
     "labels": [
       "Front End", "Web", "CSS"

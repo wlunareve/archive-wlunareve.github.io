@@ -1,10 +1,9 @@
 # 2020 Frontend developer roadmap <!-- 你猜得沒錯這是去年的東西 -->
 
 此文章用於與辦公室的同事分享，
-看英文沒有問題的朋友，可以直接左轉看原文，當然我也寫了很多我自己淺薄的知識與經驗
+看英文沒有問題的朋友，可以直接左轉看原文，當然我也寫了很多我自己淺薄的知識與經驗，2021 甚至 2022 的部分，後續會努力補上
 
-先進去給個 star !!
-https://github.com/kamranahmedse/developer-roadmap
+閱讀文章的各位，先進去給個 star !! https://github.com/kamranahmedse/developer-roadmap
 
 ## 完整的大圖，大家自己點進去
 
@@ -127,12 +126,9 @@ https://github.com/kamranahmedse/developer-roadmap
 ![](https://i.imgur.com/z4uOxLy.png)
 
 * BEM
-一種 css 命名方式，主要就是讓你好維護，而且不容易出現 css 汙染用的 <br>
-實務上的應用經驗，這種多層的 css 命名，要聰明的分層有時候不太容易，而且還是會有蠻多重複的 css 程式碼，現在有提倡另外一種 utility base 的寫法(詳情可見 TailWind)
+一種 css 命名方式，主要就是讓你好維護，而且不容易出現 css 汙染用的，實務上的應用經驗，這種多層的 css 命名，要聰明的分層有時候不太容易，而且還是會有蠻多重複的 css 程式碼，現在有提倡另外一種 utility base 的寫法(詳情可見 TailWind)
 * CSS預處理器
-讓你可以寫 CSS 像在寫 CODE 一樣， <br>
-我現在是用 SCSS，把變數拉出來，然後嵌套減少重複相似的命名，也有 mixin 什麼的，<br>
-要使用的話 webpack.config 跟 \<style> 那邊改一下就行了。
+讓你可以寫 CSS 像在寫 CODE 一樣，我現在是用 SCSS，把變數拉出來，然後嵌套減少重複相似的命名，也有 mixin 什麼的，要使用的話 webpack.config 跟 \<style> 那邊改一下就行了。
 
 ### Build Tools
 
@@ -166,9 +162,10 @@ package.json 裡面寫 npm run XXXX 的指令，可以 run dev server，也能 r
 * Angular (我完全沒碰過 <br>
   網路上看聽影片的感想(可以看保哥)，像是主打 Typescript，強制你要寫型別，對團隊來說可能爛 code 機率降低，但也增進了開發的複雜度，這個各有利弊。
 * Vue.js <br>
-  主打簡單好學，漸進式引入Router Vuex Nuxt.js，
-  Vue3 的底層做了改動，好處是可以避免以前 array 跟 object 會沒有辦法監聽到變動的問題，<br>
-  同時新增 composition api ，最主要解決 object base 的舊寫法，同樣功能可能會相隔很遠地方的問題
+  主打簡單好學，漸進式引入Router Vuex Nuxt.js<br>
+  Vue3 <br>
+  1. 底層做了改動，避免以前 array 跟 object 寫不好時會沒有辦法監聽到變動的問題
+  2. 同時新增 composition api ，最主要解決 object base 的舊寫法，同樣功能可能會相隔很遠地方的問題
 
 ### Modern CSS
 
@@ -288,8 +285,7 @@ Server Side Rendering 伺服器端渲染 <br>
 
 ![](https://i.imgur.com/IcOsAsF.png)
 
-用網頁語法寫 app <br> <!-- 對，我們來搶工作的 -->
-Flutter 是這一年最常聽到的吧。
+用網頁語法寫 app <!-- 對，我們來搶工作的 --> Flutter 是這一年最常聽到的吧。
 
 ### Desktop Applications
 
