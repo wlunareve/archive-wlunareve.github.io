@@ -9,11 +9,15 @@
       <p 
         class="profile__content"
       >
-        我是 Tod，是一個務實的人，可以獨立解決問題，也能與夥伴良好合作，
-        平常學習的手段是閱讀技術文章、雜誌，目前努力朝積極分享邁進"
+        我是 Tod，是一個務實的人，能獨立解決問題，也能與夥伴良好合作，
+        平常學習的手段是閱讀技術文章、雜誌，目前努力朝積極分享邁進。
         對做出具實用性的產品有高度興趣，追求寫出可複用，少技術債的程式碼。
-        在職場工作的觀點，我認為是一個互利共生的關係，
-        與夥伴共同學習、進步，增進個人能力，同時間也開發出優秀、實用性高的產品，是我理想的工作環境。
+        職場工作中我希望是一個互利共生的關係，
+        與夥伴共同學習、進步，一起增進個人能力，同時間也開發出優秀、實用性高的產品，是我理想的工作環境。
+      </p>
+      <p 
+        class="profile__content"
+      >
         目前正尋找有良好開發流程的公司，希望能找到志同道合的夥伴，同時我付出的是自己面對問題、解決問題，善於學習的能力。
       </p>
     </section>
@@ -90,8 +94,8 @@
         title="資拓宏宇氣象部門-前、全端工程師"
         :li-contents="[
           '初入公司時目標以全端工程師發展，但職涯上主要以前端工作為主，也漸漸喜歡上處理前端工作',
-          '積極參與技術討論，共同增進團隊開發能力，平常會讀技術文章寫成指南或是 best practice 分享給其他人',
-          '經常進行技術嘗試，推動技術更迭， 透過調整 webpack 或是嘗試 vite、eslint、stylelint、jest 來幫助小組快速開發',
+          '積極參與技術討論，共同增進團隊開發能力，平常會讀技術文章寫成指南分享給其他人',
+          '進行技術嘗試，推動技術更迭， 透過調整 webpack 或是嘗試 vite、eslint、stylelint、jest 來幫助小組快速開發',
           '做為新人 mentor，幫助上手工作'
         ]"
       />
@@ -99,7 +103,7 @@
         title="治略資訊整合股份有限公司-後端實習生"
         :li-contents="[
           '擔任後端實習生，幫忙 db 備份，爬蟲工作',
-          '在實習中自主學習 docker，使用 django 開發 api，與兩位位前端實習生合作',
+          '在實習中自主學習 docker，使用 django 開發 api，與兩位前端實習生合作',
         ]"
       />
     </section>  
@@ -116,7 +120,7 @@
           '在職期間主動重構前端程式碼，提高客製化的擴充性',
           '重構同時並行開發數個地圖產品，確保不延誤預期的客製化需求',
           '利用 Vue I18n 開發中英文版的切換功能',
-          '在職期間主動學習 SCSS 及 BEM 修改全新設計頁面'
+          '主動學習 SCSS 及 BEM 套用至修改全新設計頁面'
         ]"
       />
       <Article
@@ -159,8 +163,8 @@
       const frontEndSkills = [
         {
           name: 'HTML',
-          description: '了解 Semantic HTML，積極應用於平常撰寫上',
-          level: 1,
+          description: '努力套用 Semantic HTML 於平常撰寫上',
+          level: 2,
           icon: {
             source: 'fas',
             name: 'fa-code',
@@ -168,7 +172,7 @@
         },
         {
           name: 'Javascript',
-          description: '了解 Funtional Programming，能適當撰寫可複用程式碼',
+          description: '熟悉 ES6+ 語法，能適當撰寫可複用程式碼，目前正學習 Funtional Programming',
           level: 3,
           icon: {
             source: 'fab',
@@ -178,7 +182,7 @@
         },
         {
           name: 'CSS/Scss',
-          description: '使用 BEM 命名，適當切割元件，也嘗試於使用 Utility base 的方式命名',
+          description: '使用 BEM 命名，能適當切割元件，也嘗試於使用 Utility base 的方式開發',
           level: 2,
           icon: {
             source: 'fab',
@@ -198,7 +202,7 @@
         },
         {
           name: 'leaflet',
-          description: '介接 geoJson 搭配 openStreetMap 達成台灣各地資料展現',
+          description: '介接 geoJson 搭配 openStreetMap 達成台灣各地區資料展現',
           level: 2,
           icon: {
             source: 'far',
@@ -208,7 +212,7 @@
         },
         {
           name: 'd3',
-          description: '能將資料繪製成柱狀、線狀圖，提供資料視覺化表現',
+          description: '能將資料繪製成柱狀、線狀圖，提供資料視覺化表現，對於寫複用元件還需要努力',
           level: 2,
           icon: {
             source: 'fas',
@@ -241,7 +245,7 @@
       const toolSkills = [
         {
           name: 'Git',
-          description: '具備基本指令操作能力，能應用 semantic commit 進行版控，了解 github flow',
+          description: '具備基本指令操作能力，能應用 semantic commit 進行版控，閱讀過 flow 的相關文章',
           level: 2,
           icon: {
             source: 'fas',
@@ -251,7 +255,7 @@
         },
         {
           name: 'Webpack',
-          description: '具有前端網站 config 調整經驗，能獨立完成版本更新工作',
+          description: '具有前端網站 config 調整經驗，能獨立完成套件跨版本更新工作',
           level: 2,
           icon: {
             source: 'far',
@@ -261,7 +265,7 @@
         },
         {
           name: 'Vite',
-          description: '將團隊函式庫組件轉換至 vite ，增進團隊工作效率',
+          description: '將團隊函式庫套件轉換至 vite ，增進團隊工作效率，目前調整經驗不夠豐富',
           level: 1,
           icon: {
             source: 'far',
