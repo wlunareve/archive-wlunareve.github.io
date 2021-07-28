@@ -1,6 +1,9 @@
 # 2020 Frontend developer roadmap <!-- 你猜得沒錯這是去年的東西 -->
 
-大家可以進去給個 star !!
+此文章用於與辦公室的同事分享，
+看英文沒有問題的朋友，可以直接左轉看原文，當然我也寫了很多我自己淺薄的知識與經驗
+
+先進去給個 star !!
 https://github.com/kamranahmedse/developer-roadmap
 
 ## 完整的大圖，大家自己點進去
@@ -11,16 +14,16 @@ https://github.com/kamranahmedse/developer-roadmap
 
 ### basic
 
-反正就一定要會
-
 ![](https://i.imgur.com/cDh3b0u.png)
 
 * Semantic Versioning
-  語意化版本：https://semver.org/lang/zh-TW/
+  語意化版本：https://semver.org/lang/zh-TW/，
+  套用這個可以比較好的建立每次版本的迭代
 * Design Patterns
-  蠻困難的東西，最簡單來說，學這個可以讓你的程式好維護一點。
-  有很多設計模式，ex:工廠模式
-  通常開發時的想法都是，不同功能的東西要分開成不同 function ，而且好擴充
+  蠻困難，有很多深度的事情，
+  學這個主要目的是讓你的程式好維護一點。
+  有很多設計模式去應用，ex:工廠模式、觀察者模式<br>
+  白話來說，針對平常開發的工作，先要做的是不同功能的東西要分開成不同 function ，而且盡量易讀，且不要寫得過於難擴充
 * Character Encoding
   編碼相關的知識
 
@@ -28,24 +31,24 @@ https://github.com/kamranahmedse/developer-roadmap
 ### Internet
 
 ![](https://i.imgur.com/ZuVM29f.png)
-* How does the internet work? 
-  OSI TCP UDP 之類的東西吧，回大學翻書
-* What is HTTP?
-  協定
-  包含
-  請求方法: GET、POST 
-  header: 
+* Q: How does the internet work? <br>
+  A: OSI TCP UDP 
+* Q: What is HTTP? <br>
+  A: 是一個協定、
+  * 請求方法: GET、POST，常見到的是 Restful Api 串接，當然本身參數放的位置會不同，還有 CORS 的特性也有一些差別
+  * Headers: Cache 、 Cookie 、 content-type 等等設定都夾帶在這邊，有時需要在送 ajax 前做一些設定，在開啟 dev tool Network 分頁檢查 request 有沒有符合預期。
   ![](https://i.imgur.com/ZL2Y4cm.png)
-* Browser and how they work?
-  https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/
-  https://developers.google.com/web/fundamentals/performance/critical-rendering-path
+* Q: Browser and how they work? <br>
+  A: <br>
+  https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/<br>
+  https://developers.google.com/web/fundamentals/performance/critical-rendering-path<br>
   告訴你運作機制，也會稍微跟你講怎樣寫程式，效率會更好，畫面會更平滑之類的
-* DNS and how it works?
-  Domain Name System，網址如何對應到 host 的機制
-* What is Domain Name?
-  域名，https://hackmd.io/aiPD7iqeSTK1JQ_ccLoYBQ => hackmd.io
-* What is hosting(不確定)
-  好像是如何上架網頁
+* Q: DNS and how it works? <br>
+  A: Domain Name System，網址如何對應到 host 的機制
+* Q: What is Domain Name?<br>
+  A: 域名，舉例來說 https://hackmd.io/aiPD7iqeSTK1JQ_ccLoYBQ => hackmd.io 是他的 domain name
+* Q: What is hosting (不確定)
+  A: 好像是如何上架網頁，前端工程師可以用 github 作為簡單的網頁
 
 
 ### HTML
@@ -59,36 +62,39 @@ https://github.com/kamranahmedse/developer-roadmap
   <nav></nav> 
   <article></article>
   ```
-* Convection and Best Practices (不確定)，下面是舉例
-        1. Use Meaningful Title Tags
-    2. Use Descriptive Meta Tags => google 搜尋時 => 可以幫助搜尋
-  ![](https://i.imgur.com/DLIi1Jk.png)
-  3. Use Alt Attributes with Images
+* Convection and Best Practices，下面是舉例
+  1. Use Meaningful Title Tags
+  2. Use Descriptive Meta Tags => 搜尋引擎會看，可以幫助搜尋
+    ![](https://i.imgur.com/DLIi1Jk.png)
+  3. Use Alt Attributes with Images => 平常撰寫時稍微注意一下就好，補充一下圖片資訊
 
 ### CSS
-* Accessbillity (不確定)
-    與 UX 相關的東西，稍微查好像是怎麼做可以讓 user 上網時更舒服
-* SEO Basic
+* Accessbillity <br>
+    mozilla 提到，盡量讓 html tag 在添加完以後也貼近本來的目的，不要寫一個 btn 不是用作 btn
+* SEO Basic <br>
     提高 SEO 就是讓你的網站更容易被搜尋引擎搜到
-* Making Layout
-    切版
-* Responsive design and Media Queries
-    RWD，讓你的網頁在平板跟手機也好棒棒
+* Making Layout <br>
+    切版，基本工作，flex 跟 grid 在該使用的時候用他們可以讓你的排版相對輕鬆
+* Responsive design and Media Queries <br>
+    RWD，讓你的網頁在平板跟手機也好棒棒，有時候也會面對到 iOS 跟 Android 各自瀏覽器的問題
 
 ### JAVASCRIPT
 
 ![](https://i.imgur.com/YHYdzwu.png)
 
-* Syntax and Basic Constructs
-* Learn Dom Manipulations
-* Learn Fetch API / Ajax(XHR)
-* ES6+ and modular JavaScript
-  語法學一下，行數可以降低，code 乾淨一點
-  async await 
-  Template literals \`${}`
-  Destructuring assignment obj.a const { a } = obj
-  Optional chaining ?.
-  Spread syntax ...
+* Syntax and Basic Constructs <br>
+  不贅述，在正確的時候用正確的語法去寫，記得隨時努力保持程式碼整潔
+* Learn Dom Manipulations <br>
+  使用 vanilla js 或是 jQuery 可以操作 dom，在使用三大框架的時候，一些基本的語法還是可以稍微了解
+* Learn Fetch API / Ajax(XHR) <br>
+  非同步取得資料，我們使用 axios，也可以使用 fetch API，比較常見的問題是當同時呼叫多個 request 記得用 Promise.all 而非 forEach
+* ES6+ and modular JavaScript <br>
+  語法學一下，行數可以降低，程式碼可以更簡潔 <br>
+  async await <br>
+  樣板字面值 Template literals \`${}` <br>
+  解構賦值 Destructuring assignment obj.a const { a } = obj <br>
+  可選串連 Optional chaining ?. <br>
+  展開運算子 Spread syntax ... <br>
   
   
   
@@ -96,7 +102,9 @@ https://github.com/kamranahmedse/developer-roadmap
  ![](https://i.imgur.com/4fKZAS4.png)
  
  版控，
- 稍微深入一點的東西像是 rebase, git flow 看要不要應用
+ 稍微深入一點的東西像是 rebase, git flow ，多學一點，實務上嘗試應用起來<br>
+ 語意話版本 => 非常推薦這篇文章
+ https://wadehuang1993.github.io/blog/git_commit_message_best_practice/
  
 ### Web Securtiy Knowledge
 ![](https://i.imgur.com/bpHQMf9.png)
@@ -104,26 +112,26 @@ https://github.com/kamranahmedse/developer-roadmap
 * HTTPS
   有這個協定，封包可以避免竊聽
 * CORS
-  跨來源資源共享，瀏覽器會自動 block 一些東西，這時候要做相應的處理才能拿到東西
+  跨來源資源共享，當你要跨站取資源時，瀏覽器會自動 block 一些東西(為了安全性)，這時候要做相應的處理才能拿到資源
 * Content Security Policy
-  瀏覽器的實作標準，處理一些網頁被注入的問題 XSS
+  瀏覽器的實作標準，弱掃時需要處理一些前端安全性問題例如: XSS
 * OWASP Security Risks
-  只知道每年會公布十大危險的資安問題
+  每年會公布十大危險的資安問題，我們常聽到的是 XSS
   
 ### Package Managers
 ![](https://i.imgur.com/aTtJaJg.png)
-讓你可以裝套件的，每個專案各自裝，才不會有套件衝突問題
+讓你可以裝套件的，每個專案各自裝，才不會有套件衝突問題，偶爾會遇到版本問題，當遇到問題時，記得跟夥伴互相檢查彼此的不管是 node 或是 npm 版本
 
 ### CSS Architecture and CSS preprocessors (CSS預處理器)
 
 ![](https://i.imgur.com/z4uOxLy.png)
 
 * BEM
-一種 css 命名方式，主要就是讓你好維護，而且不容易出現 css 汙染用的
-
+一種 css 命名方式，主要就是讓你好維護，而且不容易出現 css 汙染用的 <br>
+實務上的應用經驗，這種多層的 css 命名，要聰明的分層有時候不太容易，而且還是會有蠻多重複的 css 程式碼，現在有提倡另外一種 utility base 的寫法(詳情可見 TailWind)
 * CSS預處理器
-讓你可以寫 CSS 像在寫 CODE 一樣，
-我現在是用 SCSS，把變數拉出來，然後嵌套減少重複相似的命名，也有 mixin 什麼的，
+讓你可以寫 CSS 像在寫 CODE 一樣， <br>
+我現在是用 SCSS，把變數拉出來，然後嵌套減少重複相似的命名，也有 mixin 什麼的，<br>
 要使用的話 webpack.config 跟 \<style> 那邊改一下就行了。
 
 ### Build Tools
@@ -132,47 +140,50 @@ https://github.com/kamranahmedse/developer-roadmap
 
 #### Task Runners
 
-* npm scripts
-package.json 裡面寫 npm run XXXX 的指令
+* npm scripts <br>
+package.json 裡面寫 npm run XXXX 的指令，可以 run dev server，也能 run test
 
 #### Module Bundlers
 
-* Webpack 打包工具
-調整 webpack.config 搭配 entry point (我們是設定在 script.js) 一直往下 import，最後才能合在一起，通常也會搭配到 babel, 各式各樣 loader，或者優化打包，讓你的單一檔案不至於太大，而影響效能。
-* vite
-  也是打包工具，vue 的相關產業鏈，以後可以考慮這個，聽說速度很快
+* Webpack: 打包工具，調整 webpack.config 搭配 entry point (我們是設定在 script.js) 一直往下 import，最後才能合在一起輸出，通常也會搭配到 babel, 各式各樣 loader，或者優化打包，讓你的單一檔案不至於太大，而影響效能。
+* vite: 另一個打包工具，vue 的相關產業鏈，新專案很推薦這個，開發的反應很快，但打包的時候還是傳統的模式。
   
 #### Linters and Foramtters
 
 * Prettier
-  一鍵幫你把 code 排好的套件(我自己沒用，因為不喜歡
+  一鍵幫你把 code 排好的套件(我自己沒有使用)，在按下這個快捷鍵時，最重要的是要先配合團隊。
 * ESLint
-  必裝，亂寫就噴你，遵守他類似做 best practice 吧，npm 裝完以後，vscode 也裝就可以從 vscode 即時看到錯誤。
+  必裝，亂寫就噴你，遵守他做 best practice 吧，npm 裝完以後，vscode 也裝就可以從 vscode 即時看到錯誤。<br>
+  因為我們是開發 vue，也可以裝 vue 的擴充包
+* Stylelint
+  必裝，給 class property 合理的順序，可以讓程式碼有一致性
 
 ### Framework
 ![](https://i.imgur.com/M5lOhkC.png)
 
-* React.js
-  主打不用寫 css html，全部都 js 幹到底
-* Angular (從來沒碰過
-  網路上聽聽影片啥的，像是主打 Typescript，強制你要寫型別，對團隊來說可能爛 code 機率降低
-* Vue.js
-  主打簡單好學，漸進式引入(Router Vuex Nuxt.js，Vue3.0 可以開始嘗試
+* React.js <br>
+  主打不用寫 css html，全部都是 js 
+* Angular (我完全沒碰過 <br>
+  網路上看聽影片的感想(可以看保哥)，像是主打 Typescript，強制你要寫型別，對團隊來說可能爛 code 機率降低，但也增進了開發的複雜度，這個各有利弊。
+* Vue.js <br>
+  主打簡單好學，漸進式引入Router Vuex Nuxt.js，
+  Vue3 的底層做了改動，好處是可以避免以前 array 跟 object 會沒有辦法監聽到變動的問題，<br>
+  同時新增 composition api ，最主要解決 object base 的舊寫法，同樣功能可能會相隔很遠地方的問題
 
 ### Modern CSS
 
 ![](https://i.imgur.com/x8qoVwO.png)
 
-CSS in JS
+CSS in JS 可以參考 Summer。桑莫。夏天 的這篇文章<br>
 https://cythilya.github.io/2020/02/25/start-your-app-the-better-way-with-styled-system/
 ![](https://i.imgur.com/zTA3DM2.png)
 
-* Styled Component
+* Styled Component<br>
   直接幫你把 style 放進 componet 中，不過這是 react 的範例就是了
 ![](https://i.imgur.com/viC77PP.png)
 
 * CSS Module
-  可以用 style.className 的方式專門引入一個 class，然後會幫你 hash 讓你不會被干擾
+  可以用 style.className 的方式專門引入一個 class，然後會幫你 hash 讓你不會被干擾<br>
   (使用 vue css scope 做的事情看起來就是這樣子了
 ![](https://i.imgur.com/qoTFbHC.png)
 
@@ -181,8 +192,8 @@ https://cythilya.github.io/2020/02/25/start-your-app-the-better-way-with-styled-
 ![](https://i.imgur.com/TlSZjnW.png)
 
 * HTML Templates
- https://developer.mozilla.org/zh-TW/docs/Web/HTML/Element/template
- 範例說，可以先建立好 html，但不會 render 等到用 js 觸發再把畫面畫出來
+ https://developer.mozilla.org/zh-TW/docs/Web/HTML/Element/template <br>
+ 範例說，可以先建立好 html，但不會 render 等到用 js 觸發再把畫面畫出來 <br>
  平常使用的 slot 的觀念跟這個也有相關
 * Custom Elements
  自製 html tag 的概念 => vue 幫我們做爆的事情
@@ -197,18 +208,19 @@ https://cythilya.github.io/2020/02/25/start-your-app-the-better-way-with-styled-
 
 ![](https://i.imgur.com/XzV0jMG.png)
 
-讓你不用一直重複刻 componet 的工具們
-比較常聽到的是 
-Material UI (經典) => 這個是類似 vuetify 的東西
+讓你不用一直重複刻 componet 的工具們 <br>
+比較常聽到的是 <br>
+Material UI (經典) => 這個是類似 vuetify 的東西 <br>
 Tailwind CSS (今年最熱門) => 這給妳很多預先寫好的 class 讓你去套用
 
 ### Test
 ![](https://i.imgur.com/ErFSIbD.png)
 
+我曾用過的工具有這兩個
 * Jest (經典
   做單元測試的工具
 * nightwatch
-  這個會開瀏覽器跑，E2E測試
+  這個會開瀏覽器跑，用來做 E2E 測試
   
 個人經驗是，在與前端框架配合上，要盡量找相容性高的，開發起來才輕鬆一點
 例如開發 vue 想辦法去找哪一種單元測試框架最適合 vue
@@ -217,8 +229,8 @@ Tailwind CSS (今年最熱門) => 這給妳很多預先寫好的 class 讓你去
 ![](https://i.imgur.com/o0E0S8M.png)
 
 * TypeScript
-  就讓你的程式碼加上型別，要想辦法不用一直 :any
-  有一派認為會加大開發成本，不過很多套件現在都全面改成 TypeScript 了(例如 vuetify
+  就讓你的程式碼加上型別，記得不要一直 :any ，這樣子有用跟沒用一樣<br>
+  有一派認為會加大開發成本，不過很多套件現在都全面改成 TypeScript 了(例如 vuetify)，所以也許在不遠的將來我們每個人都得應用
 
 ### PWA
 ![](https://i.imgur.com/XmLH25L.png)
@@ -236,23 +248,25 @@ Tailwind CSS (今年最熱門) => 這給妳很多預先寫好的 class 讓你去
 * 可被安裝：允許用戶直接「保留」PWA到他們的系統桌面，無需到應用商店完成麻煩的步驟。
 * 可被連結：只需輕鬆地分享URL便可連結至PWA中，無需複雜的安裝步驟。
 
-
 ### Server Side Rendering(SSR)
 
 ![](https://i.imgur.com/x377W9q.png)
 
-伺服器端渲染
-目的就是要讓你的網站更容易被 google 到，增加 SEO，
-因為 client side render 爛爛的爬蟲爬不出東西，就不會知道你網站幹啥用的。
+Server Side Rendering 伺服器端渲染 <br>
+目的就是要讓你的網站更容易被 google 到，增加 SEO， <br>
+因為 client side render ，比較弱的爬蟲爬不出東西，就不容易讓你的網站被搜尋到。 <br>
 
-以 Nuxt.js 為例，建立一個中介 server 先拿完 api 資料組合完放進 template 中，
-而後顯示，其實我覺得跟 django template 很像，只是多了一層
+<span style="color: gray">這部分我還需要多調查<br>
+以 Nuxt.js 為例，建立一個中介 server 先拿完 api 資料組合完放進 template 中， <br>
+而後顯示，其實我覺得跟 django template 很像，只是多了一層</span>
 
 ### GraphQL
 
 ![](https://i.imgur.com/e3kvhRQ.png)
 
 後端建立好 server 後，不像傳統的 Restful，前端工程師可以用嵌套的方式拿到資料 
+* Apollo 是用來建立 GraphQL 的框架，很常見 <br>
+我覺得資料量越大網站越大時，才嘗試引入。
 ```javascript=
 {
     title
@@ -263,30 +277,25 @@ Tailwind CSS (今年最熱門) => 這給妳很多預先寫好的 class 讓你去
 }
 ```
 
-* Apollo
-  用來建立 GraphQL 的框架，很常見
-
-我覺得資料量越大網站越大時，才嘗試引入。
-
 ### Static Site Generators
 
 ![](https://i.imgur.com/DlbeVPA.png)
 
-稍微查一下，網站中寫 markdown，可以直接幫你轉成程式碼的那種框架
+稍微查一下，網站中寫 markdown，可以直接幫你轉成程式碼的那種框架 <br>
+用框架不用像我現在的部落格有點土法煉鋼的成分
 
 ### Mobile Applications
 
 ![](https://i.imgur.com/IcOsAsF.png)
 
-用網頁語法寫 app  <!-- 對，我們來搶工作的 -->
+用網頁語法寫 app <br> <!-- 對，我們來搶工作的 -->
 Flutter 是這一年最常聽到的吧。
 
 ### Desktop Applications
 
 ![](https://i.imgur.com/9RSHyYV.png)
 
-* Electron
-  這個滿常見，例如 slack vscode，都是用這個開發的
+* Electron 這個滿常見，例如 slack vscode，都是用這個開發的
 <!-- 沒有錯啦，前端又有工作可以做囉 -->
 
 ![](https://i.imgur.com/WfkU3uG.png)

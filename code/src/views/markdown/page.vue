@@ -64,6 +64,10 @@
     list-style-type: disc;
   }
 
+  ol {
+    list-style-type: decimal;
+  }
+
   li {
     display: list-item;
     text-align: -webkit-match-parent;
