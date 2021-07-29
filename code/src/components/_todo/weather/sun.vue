@@ -1,11 +1,14 @@
 <template>
-  <div id="sun" class="sun__wrapper" :style="cssProps">
-    <div class='sun' />
+  <div id="sun" 
+    class="sun__wrapper" 
+    :style="cssProps"
+  >
+    <div class="sun" />
   </div>
 </template>
 
 <script setup>
-import { defineProps, ref, computed, reactive } from "vue";
+  import { defineProps, ref, computed, reactive } from "vue";
   // 太陽出現12小時 共180度
   // 1小時轉 15 度
 
@@ -32,21 +35,16 @@ import { defineProps, ref, computed, reactive } from "vue";
 <style lang="scss" scoped>
   .sun__wrapper {
     position: absolute;
-    display: flex;
-    justify-content: flex-end;
-    width: 80vw;
-    left: 50vw;
     bottom: 0;
+    left: 50%;
+    display: flex;
     transform: translate(-50%, 0) rotate(var(--sunDeg));
     pointer-events: none;
     z-index: 1;
   }
 
-
   .sun {
     position: relative;
-    // left: 50vw;
-    // bottom: 0;
     width: 8rem;
     height: 8rem;
     background-color: #FFDE00;
@@ -57,6 +55,7 @@ import { defineProps, ref, computed, reactive } from "vue";
       0 0 0 60px #FFDE0020,
       0 0 0 80px #FFDE0010,
       0 0 0 100px #FFDE0000,
+
       0 0 40px 100px #FFDE0010;
     transform: translate(50%, 0);
     animation:

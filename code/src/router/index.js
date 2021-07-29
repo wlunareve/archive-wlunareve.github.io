@@ -9,7 +9,7 @@ const routes = [
   {
     path: "/cv",
     name: "CV",
-    component: () => import("@/views/main.vue"),
+    component: () => import("@/views/cv.vue"),
   },
   {
     path: "/markdown",
