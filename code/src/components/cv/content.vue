@@ -12,54 +12,22 @@
         我是 Tod，是一個務實的人，能獨立解決問題，也能與夥伴良好合作，
         平常學習的手段是閱讀技術文章、雜誌，目前努力朝積極分享邁進。
         對做出具實用性的產品有高度興趣，追求寫出可複用，少技術債的程式碼。
-        職場工作中我希望是一個互利共生的關係，
-        與夥伴共同學習、進步，一起增進個人能力，同時間也開發出優秀、實用性高的產品，是我理想的工作環境。
+      </p>
+      <p class="profile__content">
+        職場工作希望能是互利共生的環境，
+        與夥伴共同學習、進步，一起增進個人能力，同時也能開發優秀、實用性高的產品。
       </p>
       <p 
         class="profile__content"
       >
-        目前正尋找有良好開發流程的公司，希望能找到志同道合的夥伴，同時我付出的是自己面對問題、解決問題，善於學習的能力。
+        目前正尋找有良好開發流程的公司，希望能找到志同道合的夥伴，同時我付出的是自己面對、解決問題，善於學習的能力。
       </p>
     </section>
 
     <section class="cv-content__section">
       <h1 class="cv-content__title">
         Skill
-        <i class="icon fas fa-exclamation-circle"
-          @click="showSkillExplanation"
-        />
       </h1>
-      <div v-if="isShowSkillExplanation"
-        class="skill__explanation"
-      >
-        <span>閱讀過文章，積極應用、內化、融入到經驗中</span>
-        <div class="skill__level">
-          <div v-for="(levelItem, index) in [...Array(3)]"
-            :key="index"
-            class="skill__level-item"
-            :class="{
-              'skill__level-item--active': index <= 0
-            }"
-          />
-        </div>
-        <span>可以自行處理問題、擁有獨立完成作業的經驗</span>
-        <div class="skill__level">
-          <div v-for="(levelItem, index) in [...Array(3)]"
-            :key="index"
-            class="skill__level-item"
-            :class="{
-              'skill__level-item--active': index <= 1
-            }"
-          />
-        </div>
-        <span>能快速找到問題，或能幫忙別人偵錯異常狀況</span>
-        <div class="skill__level">
-          <div v-for="(levelItem, index) in [...Array(3)]"
-            :key="index"
-            class="skill__level-item skill__level-item--active"
-          />
-        </div>
-      </div>
       <h2 class="skill__title">
         Front End
       </h2>
@@ -118,9 +86,9 @@
         subtitle="系統根據不同的使用單位，提供各式各樣不同的客製化氣象變數產品 JS + Vue + SCSS + BEM + Webpack"
         :li-contents="[
           '在職期間主動重構前端程式碼，提高客製化的擴充性',
-          '重構同時並行開發數個地圖產品，確保不延誤預期的客製化需求',
+          '重構同時，能夠並行開發數個地圖產品，確保不延誤預期的客製化需求',
           '利用 Vue I18n 開發中英文版的切換功能',
-          '主動學習 SCSS 及 BEM 套用至修改全新設計頁面'
+          '主動學習 SCSS 及 BEM 套用至全新設計改版網站'
         ]"
       />
       <Article
@@ -202,7 +170,7 @@
         },
         {
           name: 'leaflet',
-          description: '介接 geoJson 搭配 openStreetMap 達成台灣各地區資料展現',
+          description: '搭配 openStreetMap，介接 geoJson 達成台灣各地區資料展現、互動',
           level: 2,
           icon: {
             source: 'far',
@@ -212,7 +180,7 @@
         },
         {
           name: 'd3',
-          description: '能將資料繪製成柱狀、線狀圖，提供資料視覺化表現，對於寫複用元件還需要努力',
+          description: '能將資料繪製成柱狀、線狀圖，提供資料視覺化表現，也試著想多寫一些可複用元件',
           level: 2,
           icon: {
             source: 'fas',
@@ -265,7 +233,7 @@
         },
         {
           name: 'Vite',
-          description: '將團隊函式庫套件轉換至 vite ，增進團隊工作效率，目前調整經驗不夠豐富',
+          description: '將小組打包工具轉換為 vite ，增進工作效率',
           level: 1,
           icon: {
             source: 'far',
@@ -285,18 +253,10 @@
         },
       ]
 
-      const isShowSkillExplanation = ref(false)
-
-      const showSkillExplanation = () => {
-        isShowSkillExplanation.value = !isShowSkillExplanation.value
-      }
-
       return {
         profileContents,
         frontEndSkills,
         toolSkills,
-        isShowSkillExplanation,
-        showSkillExplanation,
       }
     }
   }
