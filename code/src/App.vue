@@ -21,19 +21,17 @@
 </script>
 
 <style lang="scss" scoped>
+  @import './css/RWD_mixin';
+
   @font-face {
     font-family: JasonHandwriting;
-    src: 
-      url('./assets/fonts/JasonHandwriting/JasonHandwriting1.ttf') format('truetype');
+    src: url('./assets/fonts/JasonHandwriting/JasonHandwriting1.ttf') format('truetype');
   }
 
   @font-face {
     font-family: DiamorScript;
     src: url('./assets/fonts/DiamorScript/Diamor.ttf') format('truetype');
   }
-
-
-  @import './css/RWD_mixin';
 
   .wrapper {
     display: flex;
