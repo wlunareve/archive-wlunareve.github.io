@@ -1,5 +1,6 @@
 <template>
-  <div id="sun" 
+  <div v-show="should_show_sun"
+    id="sun" 
     class="sun__wrapper" 
     :style="cssProps"
   >
@@ -9,15 +10,11 @@
 
 <script setup>
   import { defineProps, ref, computed, reactive } from "vue";
-  // 太陽出現12小時 共180度
-  // 1小時轉 15 度
-
-  // setup 中的 defineProps 與 vue2 的 props 只能用一個
-  defineProps({
-  
-  });
 
   const hour = ref(new Date().getHours());
+
+  const should_show_sun = computed(() => hour.value <= 18 && hour.value >=6)
+
   const now = computed(() => hour.value % 12)
   const angle = computed(() => {
     if (now.value >= 6) return (now.value - 6) * -15
@@ -33,60 +30,49 @@
 
 
 <style lang="scss" scoped>
-  .sun__wrapper {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    display: flex;
-    transform: translate(-50%, 0) rotate(var(--sunDeg));
-    pointer-events: none;
-    z-index: 1;
-  }
+  @import '../../../css/RWD_mixin';
+
+  $sun-length: 7rem;
+  $sun-length--mobile: 3rem;
+  $sun-color-orange: rgb(255, 166, 0);
+  $sun-color-yellow: rgb(255, 255, 0);
 
   .sun {
     position: relative;
-    width: 8rem;
-    height: 8rem;
-    background-color: #FFDE00;
+    width: $sun-length;
+    height: $sun-length;
+    background-color: $sun-color-orange;
     border-radius: 50%;
+    filter: saturate(.75);
     box-shadow:
-      0 0 0 20px #FFDE0080,
-      0 0 0 40px #FFDE0040,
-      0 0 0 60px #FFDE0020,
-      0 0 0 80px #FFDE0010,
-      0 0 0 100px #FFDE0000,
-
-      0 0 40px 100px #FFDE0010;
+      0 0 10px $sun-color-orange,
+      0 0 60px $sun-color-orange,
+      0 0 200px $sun-color-yellow,
+      inset 0 0 80px $sun-color-yellow;
     transform: translate(50%, 0);
-    animation:
-      sunrise 2s infinite linear forwards,
-      rays 2s 2s infinite linear;
-  }
 
-  @keyframes sunrise {
-    0% {
-      box-shadow: none;
+    @include pad {
+      width: $sun-length--mobile;
+      height: $sun-length--mobile;
     }
-  }
 
-  @keyframes rays {
-    0% {
-      box-shadow: 
-      0 0 0 0 #FFDE0080,
-      0 0 0 20px #FFDE0080,
-      0 0 0 40px #FFDE0040,
-      0 0 0 60px #FFDE0020,
-      0 0 0 80px #FFDE0010,
-      0 0 40px 100px #FFDE0010;
-    }
-    100% {
-      box-shadow: 
-      0 0 0 20px #FFDE0080,
-      0 0 0 40px #FFDE0040,
-      0 0 0 60px #FFDE0020,
-      0 0 0 80px #FFDE0010,
-      0 0 0 100px #FFDE0000,
-      0 0 40px 100px #FFDE0010;
+    &__wrapper {
+      position: absolute;
+      bottom: 3rem;
+      right: $sun-length--mobile;
+      display: flex;
+      justify-content: flex-end;
+      width: 50%;
+      transform: rotate(var(--sunDeg));
+      pointer-events: none;
+      z-index: 1;
+      transform-origin: left center;
+
+      @include pad {
+        top: 2rem;
+        bottom: initial;
+        transform: unset;
+      }
     }
   }
 </style>
