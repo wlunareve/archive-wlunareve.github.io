@@ -11,10 +11,14 @@
         {{ name }}
       </h3>
     </div>
-    <p class="skill__description">
+    <p v-if="description" 
+      class="skill__description"
+    >
       {{ description }}
     </p>
-    <div class="skill__level">
+    <div v-if="level >= 0" 
+      class="skill__level"
+    >
       <div v-for="(levelItem, index) in levelArray"
         :key="index"
         class="skill__level-item"
@@ -44,12 +48,12 @@
 
       description: {
         type: String,
-        required: true
+        default: '',
       },
       
       level: {
         type: Number,
-        required: true
+        default: -1,
       }
     },
 

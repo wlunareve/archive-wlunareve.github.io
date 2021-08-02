@@ -24,7 +24,7 @@
 
   .cv {
     display: grid;
-    grid-template-columns: 15rem 1fr;
+    grid-template-columns: 20rem 1fr;
     max-width: 1280px;
     height: calc(100vh - 3.25rem);
 
