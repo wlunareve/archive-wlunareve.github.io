@@ -19,9 +19,6 @@
         wlunareve@gmail.com
       </li>
       <li>
-        CCU
-      </li>
-      <li>
         中正大學 資訊管理學系 
       </li>
     </ul>

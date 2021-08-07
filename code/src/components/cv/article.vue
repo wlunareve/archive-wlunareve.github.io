@@ -21,13 +21,23 @@
     <p class="article__subtitle">
       {{ subtitle }}
     </p>
-    <ul>
-      <li v-for="(li_content, index) in liContents" 
-        :key="index"
-      >
-        {{ li_content }}
-      </li>
-    </ul>
+    <p class="article__paragraph">
+      {{ paragraph }}
+    </p>
+    <div
+      v-for="({ title: ulTitle, content: liContents}, index) in ulContents" 
+      :key="index"
+      class="lineup"
+    >
+      <span class="lineup__title">{{ ulTitle }}</span>
+      <ul>
+        <li v-for="(li_content, index) in liContents" 
+          :key="index"
+        >
+          {{ li_content }}
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -50,17 +60,17 @@
         type: String,
         default: '',
       },
+
+      paragraph: {
+        type: String,
+        default: ''
+      },
       
-      liContents: {
+      ulContents: {
         type: Array,
         required: true
       }
     },
-
-    // setup(props) {
-
-    //   return 
-    // }
   }
 </script>
 
@@ -72,7 +82,9 @@
     flex-direction: column;
 
     &__title {
-      font-size: 1.5rem;
+      margin: .25rem 0;
+      font-size: 1.25rem;
+      font-weight: bold;
 
       &--has-link:hover {
         transform: translateY(-.1rem);
@@ -85,12 +97,25 @@
       color: $grey-darken1;
     }
 
+    &__paragraph {
+      text-indent: 2rem;
+    }
+  }
+
+  .lineup {
+    margin: .25rem 0;
+
+    &__title {
+      font-weight: bold;
+    }
+
     ul {
+      margin-left: 3.5rem;
       list-style: disc;
     }
 
     li {
-      margin: 0 2rem;
+      text-indent: 0;
       line-height: 1.68;
     }
   }

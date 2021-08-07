@@ -4,48 +4,64 @@
   >
     <section class="cv-content__section article">
       <h1 class="cv-content__title">
-        Work Experience
+        Profile
       </h1>
-      <Article
-        title="資拓宏宇氣象部門 - 前、全端工程師"
-        :li-contents="[
-          '初入公司時目標以全端工程師發展，但職涯上主要以前端工作為主，也漸漸喜歡上處理前端工作',
-          '積極參與技術討論，共同增進團隊開發能力，平常會讀技術文章寫成指南分享給其他人',
-          '進行技術嘗試，推動技術更迭， 透過調整 webpack 或是嘗試 vite、eslint、stylelint、jest 來幫助小組快速開發',
-          '做為新人 mentor，幫助上手工作'
-        ]"
-      />
-      <Article
-        title="治略資訊整合股份有限公司 - 後端實習生"
-        :li-contents="[
-          '擔任後端實習生，幫忙 db 備份，爬蟲工作',
-          '在實習中自主學習 docker，使用 django 開發 api，與兩位前端實習生合作',
-        ]"
-      />
+      <p class="profile__content">
+        三年的網頁開發經驗，建置具備 i18n，RWD 的大型地圖互動網站，亦有快速迭代提供專業人員操作的數個小系統經驗。
+        前端使用 Js 後端使用 Node.js，Python，
+        除了發展系統，擔任小組骨幹，經常幫助團隊成員解決問題，與主管討論如何優化開發流程並且協助面試新夥伴。休閒時段時常閱讀技術文章，分享給組員，總體來說：對技術富有熱忱，具備有效解決問題的自信。
+      </p>
+      <!-- 技術網誌： 除了個人網頁之外，還有一個與 UI 夥伴共同合作的部落格。 -->
     </section>
 
     <section class="cv-content__section article">
       <h1 class="cv-content__title">
-        Portfolio
+        Employment History
       </h1>
       <Article
-        title="Qplus 劇烈天氣監測系統"
-        title-link="https://qpeplus.cwb.gov.tw/pub/"
-        subtitle="系統根據不同的使用單位，提供各式各樣不同的客製化氣象變數產品 JS + Vue + SCSS + BEM + Webpack"
-        :li-contents="[
-          '在職期間主動重構前端程式碼，提高客製化的擴充性',
-          '重構同時，能夠並行開發數個地圖產品，確保不延誤預期的客製化需求',
-          '利用 Vue I18n 開發中英文版的切換功能',
-          '主動學習 SCSS 及 BEM 套用至全新設計改版網站'
+        title="資拓宏宇氣象部門 - 前、全端工程師 － Apr 2019 ~ Aug 2021"
+        paragraph="擔任全端工程師，負責氣象局專案業務，解決客戶需求議題、設計網頁架構、實作系統程式、串接即時資料，提供實時資料查詢、各式不同氣象參數整合的地圖互動網站。"
+        :ul-contents="[
+          {
+            title: '系統開發',
+            content: [
+              '與客戶定期開會討論，剖析需求問題可行性，提供解決方案',
+              '使用 Vue 生態系 Vuetify 作為主要工具，開發、維護、重構共計 6 個專案網頁',
+              '配合設計師，以 Scss Bem 實作具備 RWD 的網站，提供各式裝置也能觀看得宜的介面',
+              '使用 leaflet 搭配 Openstreet Map 開發用以展示台灣地圖氣象資訊的網頁功能，供給各政府部門單位實時防災監控',
+              '使用 d3 繪製各式氣象資訊圖表，給予使用者更佳的資料視覺化體驗',
+              '除了前端工作，亦使用 Node.js 維護氣象局 Open Data 前台網站，並擴充網站新年度功能',
+            ]
+          },
+          {
+            title: '技術導入',
+            content: [
+              '導入 vue-i18n 提供網站多國語言功能，目的是使他國使用者亦能使用系統',
+              '調整 Webpack 參數，自主導入 Vite, eslint, stylelint, jest ，確保程式碼支援度、開發速度、品質',
+            ]
+          },
+          {
+            title: '自主學習、協同合作',
+            content: [
+              '自主學習 functional programming ，目的是讓程式碼更簡潔更易讀更優美',
+              '工作兩年半間，於組內分享超過十篇技術討論，涵蓋語言深度細節、框架的語法糖、撰寫的 Best Practice、單元測試、瀏覽器渲染、functional programming',
+              '寫過 python，django，能操作 docker，了解 compose 與 swarm：與後端工程師的溝通相對快速、有效',
+            ]
+          },
         ]"
       />
       <Article
-        title="Open Data 氣象資料開發平臺"
-        title-link="https://opendata.cwb.gov.tw/index"
-        subtitle="氣象局 open data api 的資料展示介紹網站 Vue + Node JS"
-        :li-contents="[
-          '承接他組開發網頁，處理日常網頁前後端的維護工作',
-          '本身擁有基本的後端經驗，能與後端工程師適當溝通',
+        title="治略資訊整合股份有限公司 - 後端實習生 － Jan 2018 ~ Jul 2018"
+        paragraph="於大四上學期提早修畢學分，後於大四下北上找尋公司，學習職場生活，期望早日擴展工作能力"
+        :ul-contents="[
+          {
+            title: '經驗積累',
+            content: [
+              '利用 requests，pandas，SQLAlchemy 處理網頁爬蟲、資料處理、 db 備份',
+              '與兩位前端實習生合作，使用 flask 開發 api，學習 docker 套用網站部屬',
+              '居家學習 django，確保不會被框架所局限',
+            ]
+          },
         ]"
       />
     </section>
@@ -53,35 +69,19 @@
 </template>
 
 <script>
-  import { ref } from 'vue'
   import { frontEndSkills, toolSkills } from '@/config/cv/skill_config.js'
   import Article from "@/components/cv/article.vue"
-  import Skill from "@/components/cv/skill.vue"
   export default {
     name: 'CvContent',
 
     components: {
       Article,
-      Skill,
     },
 
     // 之後給每個地方都擴展 dialog
 
     setup() {
-      const profileContents = [
-        "我是 Tod，是一個務實的人，可以獨立解決問題，也能與夥伴良好合作，",
-        "平常學習的手段是閱讀技術文章、雜誌，目前努力朝積極分享邁進",
-        "對做出具實用性的產品有高度興趣，追求寫出可複用，少技術債的程式碼。",
-        "在職場工作的觀點，我認為是一個互利共生的關係，",
-        "與夥伴共同學習、進步，增進個人能力，同時間也開發出優秀、實用性高的產品，是我理想的工作環境。",
-        "目前正尋找有良好開發流程的公司，希望能找到志同道合的夥伴，同時我付出的是自己面對問題、解決問題，善於學習的能力。",
-      ]
 
-      return {
-        profileContents,
-        frontEndSkills,
-        toolSkills,
-      }
     }
   }
 </script>
@@ -104,19 +104,20 @@
       justify-content: space-between;
       font-size: 2rem;
 
-      &::after {
-        position: absolute;
-        top: 36px;
-        display: block;
-        content: '';
-        width: 100%;
-        border-top: 2px solid $grey-lighten2;
-      }
+      // &::after {
+      //   position: absolute;
+      //   top: 36px;
+      //   display: block;
+      //   content: '';
+      //   width: 100%;
+      //   border-top: 2px solid $grey-lighten2;
+      // }
     }
   }
 
   .profile {
     &__content {
+      text-indent: 2rem;
       line-height: 1.68;
     }
   }
