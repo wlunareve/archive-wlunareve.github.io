@@ -9,7 +9,7 @@ export const frontEndSkills = [
     },
   },
   {
-    name: 'Javascript',
+    name: 'JavaScript',
     description: '熟悉 ES6+ 語法，能適當撰寫可複用程式碼，目前正學習 Funtional Programming',
     level: 3,
     icon: {
@@ -39,7 +39,7 @@ export const frontEndSkills = [
     },
   },
   {
-    name: 'leaflet',
+    name: 'Leaflet',
     description: '搭配 openStreetMap，介接 geoJson 達成台灣各地區資料展現、互動',
     level: 2,
     icon: {
@@ -49,7 +49,7 @@ export const frontEndSkills = [
     },
   },
   {
-    name: 'd3',
+    name: 'D3.js',
     description: '能將資料繪製成柱狀、線狀圖，提供資料視覺化表現，也試著想多寫一些可複用元件',
     level: 2,
     icon: {
