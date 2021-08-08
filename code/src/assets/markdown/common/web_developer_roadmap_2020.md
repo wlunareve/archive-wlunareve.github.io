@@ -255,7 +255,7 @@ Server Side Rendering 伺服器端渲染 <br>
 
 <span style="color: gray">這部分我還需要多調查<br>
 以 Nuxt.js 為例，建立一個中介 server 先拿完 api 資料組合完放進 template 中， <br>
-而後顯示，其實我覺得跟 django template 很像，只是多了一層</span>
+而後顯示，其實我覺得跟 Django template 很像，只是多了一層</span>
 
 ### GraphQL
 

@@ -60,7 +60,7 @@
             content: [
               '利用 Requests，pandas，SQLAlchemy 處理網頁爬蟲、資料處理、 db 備份。',
               '與兩位前端實習生合作，使用 Flask 開發 API，學習 Docker 套用網站部屬。',
-              '居家學習 django，確保不會被框架所局限。',
+              '居家學習 Django，確保不會被框架所局限。',
             ]
           },
         ]"
