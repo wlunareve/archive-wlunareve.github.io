@@ -13,6 +13,7 @@
     name: "MarkdownPage",
 
     components: {
+      JsDayjsCode: defineAsyncComponent(() => import("../../assets/markdown/js/dayjs_code.md")),
       CommonWebDeveloperRoadmap2020: defineAsyncComponent(() => import("../../assets/markdown/common/web_developer_roadmap_2020.md")),
       HtmlSemanticHtmlTag: defineAsyncComponent(() => import("../../assets/markdown/html/semantic_html_tag.md")),
       Css30CssBestPractice: defineAsyncComponent(() => import("../../assets/markdown/css/30_css_best_practice.md")),
