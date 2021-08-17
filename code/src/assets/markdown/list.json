@@ -1,7 +1,16 @@
 [
   {
+    "title": "給前端工程師的 SEO 基礎知識補強",
+    "introduction": "分享由於面試被問到 SEO 相關問題，於是高速給自己惡補的一段 SEO 相關知識。",
+    "time": "2021-08-18",
+    "path": "common/seo_basic",
+    "labels": [
+      "Front End", "Web", "SEO"
+    ]
+  },
+  {
     "title": "簡單閱讀 dayjs 原始碼 (一)",
-    "introduction": "分享閱讀 dayjs 原始碼的小心得，希望可以從中學習一些比較優質的模組程式撰寫方法",
+    "introduction": "分享閱讀 dayjs 原始碼的小心得，希望可以從中學習一些比較優質的模組程式撰寫方法。",
     "time": "2021-08-12",
     "path": "js/dayjs_code",
     "labels": [
